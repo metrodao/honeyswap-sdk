@@ -48,6 +48,9 @@ let PAIR_ADDRESS_CACHE: {
   [RoutablePlatform.HONEYSWAP.name]: {
     ...INITIAL_CACHE_STATE
   },
+  [RoutablePlatform.METROSWAP.name]: {
+    ...INITIAL_CACHE_STATE
+  },
   [RoutablePlatform.BAOSWAP.name]: {
     ...INITIAL_CACHE_STATE
   },
@@ -76,7 +79,7 @@ export class Pair {
     return this.liquidityToken.address === other.liquidityToken.address
   }
 
-  public static getAddress(tokenA: Token, tokenB: Token, platform: RoutablePlatform = RoutablePlatform.HONEYSWAP): string {
+  public static getAddress(tokenA: Token, tokenB: Token, platform: RoutablePlatform = RoutablePlatform.METROSWAP): string {
     const tokens = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA] // does safety checks
     const chainId = tokenA.chainId
     invariant(platform.supportsChain(chainId), 'INVALID_PLATFORM_CHAIN_ID')
@@ -107,7 +110,7 @@ export class Pair {
     tokenAmountB: TokenAmount,
     swapFee?: BigintIsh,
     protocolFeeDenominator?: BigintIsh,
-    platform: RoutablePlatform = RoutablePlatform.HONEYSWAP,
+    platform: RoutablePlatform = RoutablePlatform.METROSWAP,
     liquidityMiningCampaigns: LiquidityMiningCampaign[] = []
   ) {
     invariant(tokenAmountA.token.chainId === tokenAmountB.token.chainId, 'CHAIN_ID')
@@ -115,9 +118,9 @@ export class Pair {
       ? [tokenAmountA, tokenAmountB]
       : [tokenAmountB, tokenAmountA]
 
-    this.platform = platform ? platform : RoutablePlatform.HONEYSWAP
+    this.platform = platform ? platform : RoutablePlatform.METROSWAP
     const liquidityTokenAddress = Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token, platform)
-    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, liquidityTokenAddress, 18, 'HNS', 'HoneySwap')
+    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, liquidityTokenAddress, 18, 'MTS', 'MetroSwap')
     this.protocolFeeDenominator = protocolFeeDenominator ? protocolFeeDenominator : defaultProtocolFeeDenominator
     this.tokenAmounts = tokenAmounts as [TokenAmount, TokenAmount]
     this.swapFee = swapFee ? swapFee : platform.defaultSwapFee

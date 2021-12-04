@@ -27,6 +27,13 @@ export class RoutablePlatform {
   public readonly initCodeHash : { [supportedChainId in ChainId]?: string }
   public readonly defaultSwapFee: BigintIsh
 
+  public static readonly METROSWAP = new RoutablePlatform(
+    'Metroswap',
+    FACTORY_ADDRESS,
+    ROUTER_ADDRESS,
+    INIT_CODE_HASH,
+    _30
+  )
   public static readonly HONEYSWAP = new RoutablePlatform(
     'Honeyswap',
     FACTORY_ADDRESS,
