@@ -96,7 +96,7 @@ export const INIT_CODE_HASH: { [chainId: number]: string } = {
   [ChainId.ARBITRUM_TESTNET_V3]: '0xd306a548755b9295ee49cc729e13ca4a45e00199bbd890fa146da43a50571776', // Swapr
   [ChainId.SOKOL]: '0xd306a548755b9295ee49cc729e13ca4a45e00199bbd890fa146da43a50571776', // Swapr
   [ChainId.XDAI]: '0x3f88503e8580ab941773b59034fb4b2a63e86dbc031b3633a925533ad3ed2b93', // Honeyswap
-  [ChainId.MATIC]: '0xb5643d7dda9231b4ed071929aeaef1e4820da350d4a8cfc8e75b745418e27e53' // Honeyswap
+  [ChainId.MATIC]: '0xb5643d7dda9231b4ed071929aeaef1e4820da350d4a8cfc8e75b745418e27e53' // Metroswap
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
