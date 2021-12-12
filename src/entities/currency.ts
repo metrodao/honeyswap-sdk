@@ -23,6 +23,7 @@ export class Currency {
   public static readonly XDAI: Currency = new Currency(18, 'XDAI', 'xDAI')
   public static readonly MATIC: Currency = new Currency(18, 'MATIC', 'MATIC')
   public static readonly AVAX: Currency = new Currency(18, 'AVAX', 'Avax')
+  public static readonly BNB: Currency = new Currency(18, 'BNB', 'Bsc')
 
   private static readonly NATIVE_CURRENCY: { [chainId in ChainId]: Currency } = {
     [ChainId.MAINNET]: Currency.ETHER,
@@ -31,7 +32,8 @@ export class Currency {
     [ChainId.SOKOL]: Currency.SPOA,
     [ChainId.XDAI]: Currency.XDAI,
     [ChainId.MATIC]: Currency.MATIC,
-    [ChainId.AVALANCHE]: Currency.AVAX
+    [ChainId.AVALANCHE]: Currency.AVAX,
+    [ChainId.BINANCE]: Currency.BNB
   }
 
   /**
@@ -64,3 +66,4 @@ export const SPOA = Currency.SPOA
 export const XDAI = Currency.XDAI
 export const MATIC = Currency.MATIC
 export const AVAX = Currency.AVAX
+export const BNB = Currency.BNB

@@ -29,7 +29,8 @@ const INITIAL_CACHE_STATE = {
   [ChainId.SOKOL]: {},
   [ChainId.XDAI]: {},
   [ChainId.MATIC]: {},
-  [ChainId.AVALANCHE]: {}
+  [ChainId.AVALANCHE]: {},
+  [ChainId.BINANCE]: {}
 }
 
 let PAIR_ADDRESS_CACHE: {

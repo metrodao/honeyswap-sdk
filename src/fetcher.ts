@@ -40,7 +40,8 @@ const TOKEN_LOGO_URI_CACHE: {
   [ChainId.ARBITRUM_TESTNET_V3]: {},
   [ChainId.RINKEBY]: {},
   [ChainId.MATIC]: {},
-  [ChainId.AVALANCHE]: {}
+  [ChainId.AVALANCHE]: {},
+  [ChainId.BINANCE]: {}
 }
 
 /**

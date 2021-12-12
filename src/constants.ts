@@ -10,7 +10,8 @@ import {
   sokol as coreSokol,
   xdai as coreXDai,
   matic as coreMatic,
-  avalanche as coreAvalanche
+  avalanche as coreAvalanche,
+  binance as coreBinance
 } from 'dxswap-core/.contracts.json'
 import {
   rinkeby as peripheryRinkeby,
@@ -20,6 +21,7 @@ import {
   xdai as peripheryXDai,
   matic as peripheryMatic,
   avalanche as peripheryAvalanche,
+  binance as peripheryBinance
 } from 'dxswap-periphery/.contracts.json'
 
 // exports for external consumption
@@ -32,7 +34,8 @@ export enum ChainId {
   SOKOL = 77,
   XDAI = 100,
   MATIC = 137,
-  AVALANCHE = 43114
+  AVALANCHE = 43114,
+  BINANCE = 56
 }
 
 export enum TradeType {
@@ -55,7 +58,8 @@ export const FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.SOKOL]: coreSokol.factory,
   [ChainId.XDAI]: coreXDai.factory,
   [ChainId.MATIC]: coreMatic.factory,
-  [ChainId.AVALANCHE]: coreAvalanche.factory
+  [ChainId.AVALANCHE]: coreAvalanche.factory,
+  [ChainId.BINANCE]: coreBinance.factory
 }
 
 export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
@@ -65,7 +69,8 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
   [ChainId.SOKOL]: peripherySokol.router,
   [ChainId.XDAI]: peripheryXDai.router,
   [ChainId.MATIC]: peripheryMatic.router,
-  [ChainId.AVALANCHE]: peripheryAvalanche.router
+  [ChainId.AVALANCHE]: peripheryAvalanche.router,
+  [ChainId.BINANCE]: peripheryBinance.router
 }
 
 export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
@@ -75,7 +80,8 @@ export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.SOKOL]: '0xD436e756Cf41318ADeC62E8dCbEF2608753Ae068',
   [ChainId.XDAI]: '0xCD2A45F36464FdB1065160e03A2353996Ea8Ff57',
   [ChainId.MATIC]: '0x0000000000000000000000000000000000001234',
-  [ChainId.AVALANCHE]: '0x0000000000000000000000000000000000001234'
+  [ChainId.AVALANCHE]: '0x0000000000000000000000000000000000001234',
+  [ChainId.BINANCE]: '0x0000000000000000000000000000000000001234'
 }
 
 export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
@@ -85,7 +91,8 @@ export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.SOKOL]: '0x681c3836a5589b933062ACA4fd846c1287a2865F',
   [ChainId.XDAI]: '0x85E001DfFF16F388Bc32Cd18009ceDF8F9b62C9E',
   [ChainId.MATIC]: '0x0000000000000000000000000000000000001234',
-  [ChainId.AVALANCHE]: '0x0000000000000000000000000000000000001234'
+  [ChainId.AVALANCHE]: '0x0000000000000000000000000000000000001234',
+  [ChainId.BINANCE]: '0x0000000000000000000000000000000000001234'
 }
 
 export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
@@ -95,7 +102,8 @@ export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
   [ChainId.SOKOL]: 1,
   [ChainId.XDAI]: 5,
   [ChainId.MATIC]: 137,
-  [ChainId.AVALANCHE]: 43114
+  [ChainId.AVALANCHE]: 43114,
+  [ChainId.BINANCE]: 56
 }
 
 export const INIT_CODE_HASH: { [chainId: number]: string } = {
@@ -105,7 +113,8 @@ export const INIT_CODE_HASH: { [chainId: number]: string } = {
   [ChainId.SOKOL]: '0xd306a548755b9295ee49cc729e13ca4a45e00199bbd890fa146da43a50571776', // Swapr
   [ChainId.XDAI]: '0xa45b6881271b3d945937baee765df5f40c309498fbe1fa5ec32505dce8ae790d', // Metroswap
   [ChainId.MATIC]: '0xa45b6881271b3d945937baee765df5f40c309498fbe1fa5ec32505dce8ae790d', // Metroswap
-  [ChainId.AVALANCHE]: '0xa45b6881271b3d945937baee765df5f40c309498fbe1fa5ec32505dce8ae790d' // Metroswap
+  [ChainId.AVALANCHE]: '0xa45b6881271b3d945937baee765df5f40c309498fbe1fa5ec32505dce8ae790d', // Metroswap
+  [ChainId.BINANCE]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88' // Metroswap
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
@@ -144,7 +153,8 @@ const PERMISSIVE_MULTICALL_ADDRESS: { [chainId: number]: string } = {
   [ChainId.SOKOL]: '0x4D97Bd8eFaCf46b33c4438Ed0B7B6AABfa2359FB',
   [ChainId.XDAI]: '0x4E75068ED2338fCa56631E740B0723A6dbc1d5CD',
   [ChainId.MATIC]: '0x95028E5B8a734bb7E2071F96De89BABe75be9C8E',
-  [ChainId.AVALANCHE]: '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408'
+  [ChainId.AVALANCHE]: '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408',
+  [ChainId.BINANCE]: '0x1Ee38d535d541c55C9dae27B12edf090C608E6Fb'
 }
 
 export {

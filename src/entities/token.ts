@@ -59,6 +59,14 @@ export class Token extends Currency {
       18,
       'WETH.e',
       'Wrapped Ether on Avalanche'
+    ),
+    // no WETH on BSC
+    [ChainId.BINANCE]: new Token(
+      ChainId.BINANCE,
+      '0x2170Ed0880ac9A755fd29B2688956BD959F933F8',
+      18,
+      'ETH',
+      'Binance-Peg Ethereum Token'
     )
   }
 
@@ -76,6 +84,10 @@ export class Token extends Currency {
 
   public static readonly WAVAX: { [key: number]: Token } = {
     [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7', 18, 'WAVAX', 'Wrapped AVAX')
+  }
+
+  public static readonly WBNB: { [key: number]: Token } = {
+    [ChainId.BINANCE]: new Token(ChainId.BINANCE, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB')
   }
 
   public static readonly DXD: { [key: number]: Token } = {
@@ -97,7 +109,8 @@ export class Token extends Currency {
     [ChainId.SOKOL]: Token.WSPOA[ChainId.SOKOL],
     [ChainId.XDAI]: Token.WXDAI[ChainId.XDAI],
     [ChainId.MATIC]: Token.WMATIC[ChainId.MATIC],
-    [ChainId.AVALANCHE]: Token.WAVAX[ChainId.AVALANCHE]
+    [ChainId.AVALANCHE]: Token.WAVAX[ChainId.AVALANCHE],
+    [ChainId.BINANCE]: Token.WBNB[ChainId.BINANCE]
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
@@ -161,3 +174,4 @@ export const DXD = Token.DXD
 export const WXDAI = Token.WXDAI
 export const WMATIC = Token.WMATIC
 export const WAVAX = Token.WAVAX
+export const WBNB = Token.WBNB
