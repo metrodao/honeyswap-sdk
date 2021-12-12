@@ -375,9 +375,9 @@ export abstract class Fetcher {
   public static async fetchDxDaoTokenList(chainId: ChainId): Promise<TokenList> {
     const tokenListUrl = new Map([
       [1, 'https://tokens.coingecko.com/uniswap/all.json'],
-      [100, 'https://tokens.honeyswap.org'],
-      [137, 'https://tokens.honeyswap.org'],
-      [43114, 'https://tokens.honeyswap.org']
+      [100, 'https://tokens.metroswap.org'],
+      [137, 'https://tokens.metroswap.org'],
+      [43114, 'https://tokens.metroswap.org']
     ])
 
     // const tokenRegistryContract = new Contract(TOKEN_REGISTRY_ADDRESS[chainId], TokenRegistryAbi, provider)
