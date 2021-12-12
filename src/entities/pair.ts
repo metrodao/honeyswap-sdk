@@ -28,7 +28,8 @@ const INITIAL_CACHE_STATE = {
   [ChainId.ARBITRUM_TESTNET_V3]: {},
   [ChainId.SOKOL]: {},
   [ChainId.XDAI]: {},
-  [ChainId.MATIC]: {}
+  [ChainId.MATIC]: {},
+  [ChainId.AVALANCHE]: {}
 }
 
 let PAIR_ADDRESS_CACHE: {

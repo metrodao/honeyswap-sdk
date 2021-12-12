@@ -39,7 +39,8 @@ const TOKEN_LOGO_URI_CACHE: {
   [ChainId.SOKOL]: {},
   [ChainId.ARBITRUM_TESTNET_V3]: {},
   [ChainId.RINKEBY]: {},
-  [ChainId.MATIC]: {}
+  [ChainId.MATIC]: {},
+  [ChainId.AVALANCHE]: {}
 }
 
 /**
@@ -375,7 +376,8 @@ export abstract class Fetcher {
     const tokenListUrl = new Map([
       [1, 'https://tokens.coingecko.com/uniswap/all.json'],
       [100, 'https://tokens.honeyswap.org'],
-      [137, 'https://tokens.honeyswap.org']
+      [137, 'https://tokens.honeyswap.org'],
+      [43114, 'https://tokens.honeyswap.org']
     ])
 
     // const tokenRegistryContract = new Contract(TOKEN_REGISTRY_ADDRESS[chainId], TokenRegistryAbi, provider)

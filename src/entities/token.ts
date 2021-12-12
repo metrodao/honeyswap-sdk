@@ -52,6 +52,13 @@ export class Token extends Currency {
       18,
       'WETH',
       'Wrapped Ether on Matic'
+    ),
+    [ChainId.AVALANCHE]: new Token(
+      ChainId.AVALANCHE,
+      '0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB',
+      18,
+      'WETH.e',
+      'Wrapped Ether on Avalanche'
     )
   }
 
@@ -65,6 +72,10 @@ export class Token extends Currency {
 
   public static readonly WMATIC: { [key: number]: Token } = {
     [ChainId.MATIC]: new Token(ChainId.MATIC, '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', 18, 'WMATIC', 'Wrapped Matic')
+  }
+
+  public static readonly WAVAX: { [key: number]: Token } = {
+    [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7', 18, 'WAVAX', 'Wrapped AVAX')
   }
 
   public static readonly DXD: { [key: number]: Token } = {
@@ -85,7 +96,8 @@ export class Token extends Currency {
     [ChainId.ARBITRUM_TESTNET_V3]: Token.WETH[ChainId.ARBITRUM_TESTNET_V3],
     [ChainId.SOKOL]: Token.WSPOA[ChainId.SOKOL],
     [ChainId.XDAI]: Token.WXDAI[ChainId.XDAI],
-    [ChainId.MATIC]: Token.WMATIC[ChainId.MATIC]
+    [ChainId.MATIC]: Token.WMATIC[ChainId.MATIC],
+    [ChainId.AVALANCHE]: Token.WAVAX[ChainId.AVALANCHE]
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
@@ -148,3 +160,4 @@ export const WSPOA = Token.WSPOA
 export const DXD = Token.DXD
 export const WXDAI = Token.WXDAI
 export const WMATIC = Token.WMATIC
+export const WAVAX = Token.WAVAX
