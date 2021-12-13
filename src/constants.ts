@@ -11,7 +11,8 @@ import {
   xdai as coreXDai,
   matic as coreMatic,
   avalanche as coreAvalanche,
-  binance as coreBinance
+  binance as coreBinance,
+  fuse as coreFuse
 } from 'dxswap-core/.contracts.json'
 import {
   rinkeby as peripheryRinkeby,
@@ -21,7 +22,8 @@ import {
   xdai as peripheryXDai,
   matic as peripheryMatic,
   avalanche as peripheryAvalanche,
-  binance as peripheryBinance
+  binance as peripheryBinance,
+  fuse as peripheryFuse
 } from 'dxswap-periphery/.contracts.json'
 
 // exports for external consumption
@@ -35,7 +37,8 @@ export enum ChainId {
   XDAI = 100,
   MATIC = 137,
   AVALANCHE = 43114,
-  BINANCE = 56
+  BINANCE = 56,
+  FUSE = 122
 }
 
 export enum TradeType {
@@ -59,7 +62,8 @@ export const FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.XDAI]: coreXDai.factory,
   [ChainId.MATIC]: coreMatic.factory,
   [ChainId.AVALANCHE]: coreAvalanche.factory,
-  [ChainId.BINANCE]: coreBinance.factory
+  [ChainId.BINANCE]: coreBinance.factory,
+  [ChainId.FUSE]: coreFuse.factory
 }
 
 export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
@@ -70,7 +74,8 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
   [ChainId.XDAI]: peripheryXDai.router,
   [ChainId.MATIC]: peripheryMatic.router,
   [ChainId.AVALANCHE]: peripheryAvalanche.router,
-  [ChainId.BINANCE]: peripheryBinance.router
+  [ChainId.BINANCE]: peripheryBinance.router,
+  [ChainId.FUSE]: peripheryFuse.router
 }
 
 export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
@@ -81,7 +86,8 @@ export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.XDAI]: '0xCD2A45F36464FdB1065160e03A2353996Ea8Ff57',
   [ChainId.MATIC]: '0x0000000000000000000000000000000000001234',
   [ChainId.AVALANCHE]: '0x0000000000000000000000000000000000001234',
-  [ChainId.BINANCE]: '0x0000000000000000000000000000000000001234'
+  [ChainId.BINANCE]: '0x0000000000000000000000000000000000001234',
+  [ChainId.FUSE]: '0x0000000000000000000000000000000000001234'
 }
 
 export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
@@ -92,7 +98,8 @@ export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.XDAI]: '0x85E001DfFF16F388Bc32Cd18009ceDF8F9b62C9E',
   [ChainId.MATIC]: '0x0000000000000000000000000000000000001234',
   [ChainId.AVALANCHE]: '0x0000000000000000000000000000000000001234',
-  [ChainId.BINANCE]: '0x0000000000000000000000000000000000001234'
+  [ChainId.BINANCE]: '0x0000000000000000000000000000000000001234',
+  [ChainId.FUSE]: '0x0000000000000000000000000000000000001234'
 }
 
 export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
@@ -103,7 +110,8 @@ export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
   [ChainId.XDAI]: 5,
   [ChainId.MATIC]: 137,
   [ChainId.AVALANCHE]: 43114,
-  [ChainId.BINANCE]: 56
+  [ChainId.BINANCE]: 56,
+  [ChainId.FUSE]: 122
 }
 
 export const INIT_CODE_HASH: { [chainId: number]: string } = {
@@ -114,7 +122,8 @@ export const INIT_CODE_HASH: { [chainId: number]: string } = {
   [ChainId.XDAI]: '0xa45b6881271b3d945937baee765df5f40c309498fbe1fa5ec32505dce8ae790d', // Metroswap
   [ChainId.MATIC]: '0xa45b6881271b3d945937baee765df5f40c309498fbe1fa5ec32505dce8ae790d', // Metroswap
   [ChainId.AVALANCHE]: '0xa45b6881271b3d945937baee765df5f40c309498fbe1fa5ec32505dce8ae790d', // Metroswap
-  [ChainId.BINANCE]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88' // Metroswap
+  [ChainId.BINANCE]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
+  [ChainId.FUSE]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88' // Metroswap
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
@@ -154,7 +163,8 @@ const PERMISSIVE_MULTICALL_ADDRESS: { [chainId: number]: string } = {
   [ChainId.XDAI]: '0x4E75068ED2338fCa56631E740B0723A6dbc1d5CD',
   [ChainId.MATIC]: '0x95028E5B8a734bb7E2071F96De89BABe75be9C8E',
   [ChainId.AVALANCHE]: '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408',
-  [ChainId.BINANCE]: '0x1Ee38d535d541c55C9dae27B12edf090C608E6Fb'
+  [ChainId.BINANCE]: '0x1Ee38d535d541c55C9dae27B12edf090C608E6Fb',
+  [ChainId.FUSE]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09'
 }
 
 export {

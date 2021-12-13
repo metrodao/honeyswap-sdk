@@ -41,7 +41,8 @@ const TOKEN_LOGO_URI_CACHE: {
   [ChainId.RINKEBY]: {},
   [ChainId.MATIC]: {},
   [ChainId.AVALANCHE]: {},
-  [ChainId.BINANCE]: {}
+  [ChainId.BINANCE]: {},
+  [ChainId.FUSE]: {}
 }
 
 /**
@@ -378,7 +379,9 @@ export abstract class Fetcher {
       [1, 'https://tokens.coingecko.com/uniswap/all.json'],
       [100, 'https://tokens.metroswap.org'],
       [137, 'https://tokens.metroswap.org'],
-      [43114, 'https://tokens.metroswap.org']
+      [43114, 'https://tokens.metroswap.org'],
+      [56, 'https://tokens.metroswap.org'],
+      [122, 'https://tokens.metroswap.org']
     ])
 
     // const tokenRegistryContract = new Contract(TOKEN_REGISTRY_ADDRESS[chainId], TokenRegistryAbi, provider)

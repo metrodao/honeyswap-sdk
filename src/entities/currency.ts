@@ -24,6 +24,7 @@ export class Currency {
   public static readonly MATIC: Currency = new Currency(18, 'MATIC', 'MATIC')
   public static readonly AVAX: Currency = new Currency(18, 'AVAX', 'Avax')
   public static readonly BNB: Currency = new Currency(18, 'BNB', 'Bsc')
+  public static readonly FUSE: Currency = new Currency(18, 'FUSE', 'Fuse')
 
   private static readonly NATIVE_CURRENCY: { [chainId in ChainId]: Currency } = {
     [ChainId.MAINNET]: Currency.ETHER,
@@ -33,7 +34,8 @@ export class Currency {
     [ChainId.XDAI]: Currency.XDAI,
     [ChainId.MATIC]: Currency.MATIC,
     [ChainId.AVALANCHE]: Currency.AVAX,
-    [ChainId.BINANCE]: Currency.BNB
+    [ChainId.BINANCE]: Currency.BNB,
+    [ChainId.FUSE]: Currency.FUSE
   }
 
   /**
@@ -67,3 +69,4 @@ export const XDAI = Currency.XDAI
 export const MATIC = Currency.MATIC
 export const AVAX = Currency.AVAX
 export const BNB = Currency.BNB
+export const FUSE = Currency.FUSE

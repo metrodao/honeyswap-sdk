@@ -30,7 +30,8 @@ const INITIAL_CACHE_STATE = {
   [ChainId.XDAI]: {},
   [ChainId.MATIC]: {},
   [ChainId.AVALANCHE]: {},
-  [ChainId.BINANCE]: {}
+  [ChainId.BINANCE]: {},
+  [ChainId.FUSE]: {}
 }
 
 let PAIR_ADDRESS_CACHE: {
