@@ -22,9 +22,10 @@ export class Currency {
   public static readonly SPOA: Currency = new Currency(18, 'SPOA', 'Sokol POA')
   public static readonly XDAI: Currency = new Currency(18, 'XDAI', 'xDAI')
   public static readonly MATIC: Currency = new Currency(18, 'MATIC', 'MATIC')
-  public static readonly AVAX: Currency = new Currency(18, 'AVAX', 'Avax')
+  public static readonly AVAX: Currency = new Currency(18, 'AVAX', 'Avalanche')
   public static readonly BNB: Currency = new Currency(18, 'BNB', 'Bsc')
   public static readonly FUSE: Currency = new Currency(18, 'FUSE', 'Fuse')
+  public static readonly IOTX: Currency = new Currency(18, 'IOTX', 'IoTeX')
 
   private static readonly NATIVE_CURRENCY: { [chainId in ChainId]: Currency } = {
     [ChainId.MAINNET]: Currency.ETHER,
@@ -35,7 +36,8 @@ export class Currency {
     [ChainId.MATIC]: Currency.MATIC,
     [ChainId.AVALANCHE]: Currency.AVAX,
     [ChainId.BINANCE]: Currency.BNB,
-    [ChainId.FUSE]: Currency.FUSE
+    [ChainId.FUSE]: Currency.FUSE,
+    [ChainId.IOTEX]: Currency.IOTX
   }
 
   /**
@@ -70,3 +72,4 @@ export const MATIC = Currency.MATIC
 export const AVAX = Currency.AVAX
 export const BNB = Currency.BNB
 export const FUSE = Currency.FUSE
+export const IOTX = Currency.IOTX
