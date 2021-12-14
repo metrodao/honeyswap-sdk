@@ -27,7 +27,7 @@ export class Currency {
   public static readonly FUSE: Currency = new Currency(18, 'FUSE', 'Fuse')
   public static readonly IOTX: Currency = new Currency(18, 'IOTX', 'IoTeX')
   public static readonly FTM: Currency = new Currency(18, 'FTM', 'Fantom')
-  public static readonly ONE: Currency = new Currency(18, 'One', 'Harmony')
+  public static readonly ONE: Currency = new Currency(18, 'ONE', 'Harmony')
 
   private static readonly NATIVE_CURRENCY: { [chainId in ChainId]: Currency } = {
     [ChainId.MAINNET]: Currency.ETHER,
