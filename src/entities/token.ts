@@ -109,7 +109,7 @@ export class Token extends Currency {
   }
 
   public static readonly WIOTX: { [key: number]: Token } = {
-    [ChainId.FUSE]: new Token(ChainId.IOTEX, '0xA00744882684C3e4747faEFD68D283eA44099D03', 18, 'WIOTX', 'Wrapped IOTX')
+    [ChainId.IOTEX]: new Token(ChainId.IOTEX, '0xA00744882684C3e4747faEFD68D283eA44099D03', 18, 'WIOTX', 'Wrapped IOTX')
   }
 
   public static readonly DXD: { [key: number]: Token } = {
