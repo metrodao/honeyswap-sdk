@@ -32,7 +32,8 @@ const INITIAL_CACHE_STATE = {
   [ChainId.AVALANCHE]: {},
   [ChainId.BINANCE]: {},
   [ChainId.FUSE]: {},
-  [ChainId.IOTEX]: {}
+  [ChainId.IOTEX]: {},
+  [ChainId.FANTOM]: {}
 }
 
 let PAIR_ADDRESS_CACHE: {

@@ -26,6 +26,7 @@ export class Currency {
   public static readonly BNB: Currency = new Currency(18, 'BNB', 'Bsc')
   public static readonly FUSE: Currency = new Currency(18, 'FUSE', 'Fuse')
   public static readonly IOTX: Currency = new Currency(18, 'IOTX', 'IoTeX')
+  public static readonly FTM: Currency = new Currency(18, 'FTM', 'Fantom')
 
   private static readonly NATIVE_CURRENCY: { [chainId in ChainId]: Currency } = {
     [ChainId.MAINNET]: Currency.ETHER,
@@ -37,7 +38,8 @@ export class Currency {
     [ChainId.AVALANCHE]: Currency.AVAX,
     [ChainId.BINANCE]: Currency.BNB,
     [ChainId.FUSE]: Currency.FUSE,
-    [ChainId.IOTEX]: Currency.IOTX
+    [ChainId.IOTEX]: Currency.IOTX,
+    [ChainId.FANTOM]: Currency.FTM
   }
 
   /**
@@ -73,3 +75,4 @@ export const AVAX = Currency.AVAX
 export const BNB = Currency.BNB
 export const FUSE = Currency.FUSE
 export const IOTX = Currency.IOTX
+export const FTM = Currency.FTM

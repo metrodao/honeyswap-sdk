@@ -13,7 +13,8 @@ import {
   avalanche as coreAvalanche,
   binance as coreBinance,
   fuse as coreFuse,
-  iotex as coreIotex
+  iotex as coreIotex,
+  fantom as coreFantom
 } from 'dxswap-core/.contracts.json'
 import {
   rinkeby as peripheryRinkeby,
@@ -25,7 +26,8 @@ import {
   avalanche as peripheryAvalanche,
   binance as peripheryBinance,
   fuse as peripheryFuse,
-  iotex as peripheryIotex
+  iotex as peripheryIotex,
+  fantom as peripheryFantom
 } from 'dxswap-periphery/.contracts.json'
 
 // exports for external consumption
@@ -41,7 +43,8 @@ export enum ChainId {
   AVALANCHE = 43114,
   BINANCE = 56,
   FUSE = 122,
-  IOTEX = 4689
+  IOTEX = 4689,
+  FANTOM = 250
 }
 
 export enum TradeType {
@@ -67,7 +70,8 @@ export const FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.AVALANCHE]: coreAvalanche.factory,
   [ChainId.BINANCE]: coreBinance.factory,
   [ChainId.FUSE]: coreFuse.factory,
-  [ChainId.IOTEX]: coreIotex.factory
+  [ChainId.IOTEX]: coreIotex.factory,
+  [ChainId.FANTOM]: coreFantom.factory
 }
 
 export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
@@ -80,7 +84,8 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
   [ChainId.AVALANCHE]: peripheryAvalanche.router,
   [ChainId.BINANCE]: peripheryBinance.router,
   [ChainId.FUSE]: peripheryFuse.router,
-  [ChainId.IOTEX]: peripheryIotex.router
+  [ChainId.IOTEX]: peripheryIotex.router,
+  [ChainId.FANTOM]: peripheryFantom.router
 }
 
 export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
@@ -93,7 +98,8 @@ export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.AVALANCHE]: '0x0000000000000000000000000000000000001234',
   [ChainId.BINANCE]: '0x0000000000000000000000000000000000001234',
   [ChainId.FUSE]: '0x0000000000000000000000000000000000001234',
-  [ChainId.IOTEX]: '0x0000000000000000000000000000000000001234'
+  [ChainId.IOTEX]: '0x0000000000000000000000000000000000001234',
+  [ChainId.FANTOM]: '0x0000000000000000000000000000000000001234'
 }
 
 export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
@@ -106,7 +112,8 @@ export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.AVALANCHE]: '0x0000000000000000000000000000000000001234',
   [ChainId.BINANCE]: '0x0000000000000000000000000000000000001234',
   [ChainId.FUSE]: '0x0000000000000000000000000000000000001234',
-  [ChainId.IOTEX]: '0x0000000000000000000000000000000000001234'
+  [ChainId.IOTEX]: '0x0000000000000000000000000000000000001234',
+  [ChainId.FANTOM]: '0x0000000000000000000000000000000000001234'
 }
 
 export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
@@ -119,7 +126,8 @@ export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
   [ChainId.AVALANCHE]: 43114,
   [ChainId.BINANCE]: 56,
   [ChainId.FUSE]: 122,
-  [ChainId.IOTEX]: 4689
+  [ChainId.IOTEX]: 4689,
+  [ChainId.FANTOM]: 250
 }
 
 export const INIT_CODE_HASH: { [chainId: number]: string } = {
@@ -132,7 +140,8 @@ export const INIT_CODE_HASH: { [chainId: number]: string } = {
   [ChainId.AVALANCHE]: '0xa45b6881271b3d945937baee765df5f40c309498fbe1fa5ec32505dce8ae790d', // Metroswap
   [ChainId.BINANCE]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
   [ChainId.FUSE]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
-  [ChainId.IOTEX]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88' // Metroswap
+  [ChainId.IOTEX]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
+  [ChainId.FANTOM]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88' // Metroswap
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
@@ -174,7 +183,8 @@ const PERMISSIVE_MULTICALL_ADDRESS: { [chainId: number]: string } = {
   [ChainId.AVALANCHE]: '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408',
   [ChainId.BINANCE]: '0x1Ee38d535d541c55C9dae27B12edf090C608E6Fb',
   [ChainId.FUSE]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09',
-  [ChainId.IOTEX]: '0x9A734E90D89f0c346E27c404D350Ff56DEAD55f1'
+  [ChainId.IOTEX]: '0x9A734E90D89f0c346E27c404D350Ff56DEAD55f1',
+  [ChainId.FANTOM]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09'
 }
 
 export {

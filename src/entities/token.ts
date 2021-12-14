@@ -81,6 +81,13 @@ export class Token extends Currency {
       18,
       'WETH',
       'Wrapped Ether'
+    ),
+    [ChainId.FANTOM]: new Token(
+      ChainId.FANTOM,
+      '0x74b23882a30290451A17c44f4F05243b6b58C76d',
+      18,
+      'ETH',
+      'Ether'
     )
   }
 
@@ -112,6 +119,10 @@ export class Token extends Currency {
     [ChainId.IOTEX]: new Token(ChainId.IOTEX, '0xA00744882684C3e4747faEFD68D283eA44099D03', 18, 'WIOTX', 'Wrapped IOTX')
   }
 
+  public static readonly WFTM: { [key: number]: Token } = {
+    [ChainId.FANTOM]: new Token(ChainId.FANTOM, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WFTM', 'Wrapped Fantom')
+  }
+
   public static readonly DXD: { [key: number]: Token } = {
     [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xa1d65E8fB6e87b60FECCBc582F7f97804B725521', 18, 'DXD', 'DXdao'),
     [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0x554898A0BF98aB0C03ff86C7DccBE29269cc4d29', 18, 'DXD', 'DXdao'),
@@ -134,7 +145,8 @@ export class Token extends Currency {
     [ChainId.AVALANCHE]: Token.WAVAX[ChainId.AVALANCHE],
     [ChainId.BINANCE]: Token.WBNB[ChainId.BINANCE],
     [ChainId.FUSE]: Token.WFUSE[ChainId.FUSE],
-    [ChainId.IOTEX]: Token.WIOTX[ChainId.IOTEX]
+    [ChainId.IOTEX]: Token.WIOTX[ChainId.IOTEX],
+    [ChainId.FANTOM]: Token.WFTM[ChainId.FANTOM]
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
@@ -201,3 +213,4 @@ export const WAVAX = Token.WAVAX
 export const WBNB = Token.WBNB
 export const WFUSE = Token.WFUSE
 export const WIOTX = Token.WIOTX
+export const WFTM = Token.WFTM
