@@ -14,7 +14,8 @@ import {
   binance as coreBinance,
   fuse as coreFuse,
   iotex as coreIotex,
-  fantom as coreFantom
+  fantom as coreFantom,
+  harmony as coreHarmony
 } from 'dxswap-core/.contracts.json'
 import {
   rinkeby as peripheryRinkeby,
@@ -27,7 +28,8 @@ import {
   binance as peripheryBinance,
   fuse as peripheryFuse,
   iotex as peripheryIotex,
-  fantom as peripheryFantom
+  fantom as peripheryFantom,
+  harmony as peripheryHarmony
 } from 'dxswap-periphery/.contracts.json'
 
 // exports for external consumption
@@ -44,7 +46,8 @@ export enum ChainId {
   BINANCE = 56,
   FUSE = 122,
   IOTEX = 4689,
-  FANTOM = 250
+  FANTOM = 250,
+  HARMONY = 1666600000
 }
 
 export enum TradeType {
@@ -71,7 +74,8 @@ export const FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.BINANCE]: coreBinance.factory,
   [ChainId.FUSE]: coreFuse.factory,
   [ChainId.IOTEX]: coreIotex.factory,
-  [ChainId.FANTOM]: coreFantom.factory
+  [ChainId.FANTOM]: coreFantom.factory,
+  [ChainId.HARMONY]: coreHarmony.factory
 }
 
 export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
@@ -85,7 +89,8 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
   [ChainId.BINANCE]: peripheryBinance.router,
   [ChainId.FUSE]: peripheryFuse.router,
   [ChainId.IOTEX]: peripheryIotex.router,
-  [ChainId.FANTOM]: peripheryFantom.router
+  [ChainId.FANTOM]: peripheryFantom.router,
+  [ChainId.HARMONY]: peripheryHarmony.router
 }
 
 export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
@@ -99,7 +104,8 @@ export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.BINANCE]: '0x0000000000000000000000000000000000001234',
   [ChainId.FUSE]: '0x0000000000000000000000000000000000001234',
   [ChainId.IOTEX]: '0x0000000000000000000000000000000000001234',
-  [ChainId.FANTOM]: '0x0000000000000000000000000000000000001234'
+  [ChainId.FANTOM]: '0x0000000000000000000000000000000000001234',
+  [ChainId.HARMONY]: '0x0000000000000000000000000000000000001234'
 }
 
 export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
@@ -113,7 +119,8 @@ export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.BINANCE]: '0x0000000000000000000000000000000000001234',
   [ChainId.FUSE]: '0x0000000000000000000000000000000000001234',
   [ChainId.IOTEX]: '0x0000000000000000000000000000000000001234',
-  [ChainId.FANTOM]: '0x0000000000000000000000000000000000001234'
+  [ChainId.FANTOM]: '0x0000000000000000000000000000000000001234',
+  [ChainId.HARMONY]: '0x0000000000000000000000000000000000001234'
 }
 
 export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
@@ -127,7 +134,8 @@ export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
   [ChainId.BINANCE]: 56,
   [ChainId.FUSE]: 122,
   [ChainId.IOTEX]: 4689,
-  [ChainId.FANTOM]: 250
+  [ChainId.FANTOM]: 250,
+  [ChainId.HARMONY]: 1666600000
 }
 
 export const INIT_CODE_HASH: { [chainId: number]: string } = {
@@ -141,7 +149,8 @@ export const INIT_CODE_HASH: { [chainId: number]: string } = {
   [ChainId.BINANCE]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
   [ChainId.FUSE]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
   [ChainId.IOTEX]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
-  [ChainId.FANTOM]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88' // Metroswap
+  [ChainId.FANTOM]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
+  [ChainId.HARMONY]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88' // Metroswap
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
@@ -184,7 +193,8 @@ const PERMISSIVE_MULTICALL_ADDRESS: { [chainId: number]: string } = {
   [ChainId.BINANCE]: '0x1Ee38d535d541c55C9dae27B12edf090C608E6Fb',
   [ChainId.FUSE]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09',
   [ChainId.IOTEX]: '0x9A734E90D89f0c346E27c404D350Ff56DEAD55f1',
-  [ChainId.FANTOM]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09'
+  [ChainId.FANTOM]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09',
+  [ChainId.HARMONY]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09'
 }
 
 export {

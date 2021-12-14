@@ -44,7 +44,8 @@ const TOKEN_LOGO_URI_CACHE: {
   [ChainId.BINANCE]: {},
   [ChainId.FUSE]: {},
   [ChainId.IOTEX]: {},
-  [ChainId.FANTOM]: {}
+  [ChainId.FANTOM]: {},
+  [ChainId.HARMONY]: {}
 }
 
 /**
@@ -385,7 +386,8 @@ export abstract class Fetcher {
       [56, 'https://tokens.metroswap.org'],
       [122, 'https://tokens.metroswap.org'],
       [4689, 'https://tokens.metroswap.org'],
-      [250, 'https://tokens.metroswap.org']
+      [250, 'https://tokens.metroswap.org'],
+      [1666600000, 'https://tokens.metroswap.org']
     ])
 
     // const tokenRegistryContract = new Contract(TOKEN_REGISTRY_ADDRESS[chainId], TokenRegistryAbi, provider)
