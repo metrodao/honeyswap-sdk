@@ -382,12 +382,12 @@ export abstract class Fetcher {
       [1, 'https://tokens.coingecko.com/uniswap/all.json'],
       [100, 'https://tokens.metroswap.org'],
       [137, 'https://tokens.metroswap.org'],
-      [43114, 'https://tokens.metroswap.org'],
-      [56, 'https://tokens.metroswap.org'],
-      [122, 'https://tokens.metroswap.org'],
+      [43114, 'https://tokens.metroswap.org/avalanche.json'],
+      [56, 'https://tokens.metroswap.org/binance.json'],
+      [122, 'https://tokens.metroswap.org/fuse.json'],
       [4689, 'https://tokens.metroswap.org'],
-      [250, 'https://tokens.metroswap.org'],
-      [1666600000, 'https://tokens.metroswap.org']
+      [250, 'https://tokens.metroswap.org/fantom.json'],
+      [1666600000, 'https://tokens.metroswap.org/harmony.json']
     ])
 
     // const tokenRegistryContract = new Contract(TOKEN_REGISTRY_ADDRESS[chainId], TokenRegistryAbi, provider)
