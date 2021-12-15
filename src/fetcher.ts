@@ -385,7 +385,7 @@ export abstract class Fetcher {
       [43114, 'https://tokens.metroswap.org/avalanche.json'],
       [56, 'https://tokens.metroswap.org/binance.json'],
       [122, 'https://tokens.metroswap.org/fuse.json'],
-      [4689, 'https://tokens.metroswap.org'],
+      [4689, 'https://tokens.metroswap.org/iotex.json'],
       [250, 'https://tokens.metroswap.org/fantom.json'],
       [1666600000, 'https://tokens.metroswap.org/harmony.json']
     ])
