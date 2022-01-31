@@ -15,7 +15,8 @@ import {
   fuse as coreFuse,
   iotex as coreIotex,
   fantom as coreFantom,
-  harmony as coreHarmony
+  harmony as coreHarmony,
+  bittorrent as coreBittorrent
 } from 'dxswap-core/.contracts.json'
 import {
   rinkeby as peripheryRinkeby,
@@ -29,7 +30,8 @@ import {
   fuse as peripheryFuse,
   iotex as peripheryIotex,
   fantom as peripheryFantom,
-  harmony as peripheryHarmony
+  harmony as peripheryHarmony,
+  bittorrent as peripheryBittorrent
 } from 'dxswap-periphery/.contracts.json'
 
 // exports for external consumption
@@ -47,7 +49,8 @@ export enum ChainId {
   FUSE = 122,
   IOTEX = 4689,
   FANTOM = 250,
-  HARMONY = 1666600000
+  HARMONY = 1666600000,
+  BITTORRENT = 199
 }
 
 export enum TradeType {
@@ -75,7 +78,8 @@ export const FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.FUSE]: coreFuse.factory,
   [ChainId.IOTEX]: coreIotex.factory,
   [ChainId.FANTOM]: coreFantom.factory,
-  [ChainId.HARMONY]: coreHarmony.factory
+  [ChainId.HARMONY]: coreHarmony.factory,
+  [ChainId.BITTORRENT]: coreBittorrent.factory
 }
 
 export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
@@ -90,7 +94,8 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
   [ChainId.FUSE]: peripheryFuse.router,
   [ChainId.IOTEX]: peripheryIotex.router,
   [ChainId.FANTOM]: peripheryFantom.router,
-  [ChainId.HARMONY]: peripheryHarmony.router
+  [ChainId.HARMONY]: peripheryHarmony.router,
+  [ChainId.BITTORRENT]: peripheryBittorrent.router
 }
 
 export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
@@ -105,7 +110,8 @@ export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.FUSE]: '0x0000000000000000000000000000000000001234',
   [ChainId.IOTEX]: '0x0000000000000000000000000000000000001234',
   [ChainId.FANTOM]: '0x0000000000000000000000000000000000001234',
-  [ChainId.HARMONY]: '0x0000000000000000000000000000000000001234'
+  [ChainId.HARMONY]: '0x0000000000000000000000000000000000001234',
+  [ChainId.BITTORRENT]: '0x0000000000000000000000000000000000001234'
 }
 
 export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
@@ -120,7 +126,8 @@ export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.FUSE]: '0x0000000000000000000000000000000000001234',
   [ChainId.IOTEX]: '0x0000000000000000000000000000000000001234',
   [ChainId.FANTOM]: '0x0000000000000000000000000000000000001234',
-  [ChainId.HARMONY]: '0x0000000000000000000000000000000000001234'
+  [ChainId.HARMONY]: '0x0000000000000000000000000000000000001234',
+  [ChainId.BITTORRENT]: '0x0000000000000000000000000000000000001234'
 }
 
 export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
@@ -135,7 +142,8 @@ export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
   [ChainId.FUSE]: 122,
   [ChainId.IOTEX]: 4689,
   [ChainId.FANTOM]: 250,
-  [ChainId.HARMONY]: 1666600000
+  [ChainId.HARMONY]: 1666600000,
+  [ChainId.BITTORRENT]: 199
 }
 
 export const INIT_CODE_HASH: { [chainId: number]: string } = {
@@ -150,7 +158,8 @@ export const INIT_CODE_HASH: { [chainId: number]: string } = {
   [ChainId.FUSE]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
   [ChainId.IOTEX]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
   [ChainId.FANTOM]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
-  [ChainId.HARMONY]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88' // Metroswap
+  [ChainId.HARMONY]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
+  [ChainId.BITTORRENT]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88' // Metroswap
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
@@ -194,7 +203,8 @@ const PERMISSIVE_MULTICALL_ADDRESS: { [chainId: number]: string } = {
   [ChainId.FUSE]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09',
   [ChainId.IOTEX]: '0x9A734E90D89f0c346E27c404D350Ff56DEAD55f1',
   [ChainId.FANTOM]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09',
-  [ChainId.HARMONY]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09'
+  [ChainId.HARMONY]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09',
+  [ChainId.BITTORRENT]: '0x31F9101A7EfD146BD6bc2BBC99D3AAc7f8ae0986'
 }
 
 export {

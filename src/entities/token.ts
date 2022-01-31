@@ -95,6 +95,13 @@ export class Token extends Currency {
       18,
       '1ETH',
       'ETH'
+    ),
+    [ChainId.BITTORRENT]: new Token(
+      ChainId.BITTORRENT,
+      '0x1249C65AfB11D179FFB3CE7D4eEDd1D9b98AD006',
+      18,
+      'ETH',
+      'Ethereum'
     )
   }
 
@@ -134,6 +141,10 @@ export class Token extends Currency {
     [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a', 18, 'WONE', 'Wrapped ONE')
   }
 
+  public static readonly WBTT: { [key: number]: Token } = {
+    [ChainId.HARMONY]: new Token(ChainId.BITTORRENT, '0x8D193c6efa90BCFf940A98785d1Ce9D093d3DC8A', 18, 'WBTT', 'Wrapped BTT')
+  }
+
   public static readonly DXD: { [key: number]: Token } = {
     [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xa1d65E8fB6e87b60FECCBc582F7f97804B725521', 18, 'DXD', 'DXdao'),
     [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0x554898A0BF98aB0C03ff86C7DccBE29269cc4d29', 18, 'DXD', 'DXdao'),
@@ -158,7 +169,8 @@ export class Token extends Currency {
     [ChainId.FUSE]: Token.WFUSE[ChainId.FUSE],
     [ChainId.IOTEX]: Token.WIOTX[ChainId.IOTEX],
     [ChainId.FANTOM]: Token.WFTM[ChainId.FANTOM],
-    [ChainId.HARMONY]: Token.WONE[ChainId.HARMONY]
+    [ChainId.HARMONY]: Token.WONE[ChainId.HARMONY],
+    [ChainId.BITTORRENT]: Token.WBTT[ChainId.BITTORRENT]
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
@@ -227,3 +239,4 @@ export const WFUSE = Token.WFUSE
 export const WIOTX = Token.WIOTX
 export const WFTM = Token.WFTM
 export const WONE = Token.WONE
+export const WBTT = Token.WBTT
