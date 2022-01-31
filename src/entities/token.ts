@@ -142,7 +142,7 @@ export class Token extends Currency {
   }
 
   public static readonly WBTT: { [key: number]: Token } = {
-    [ChainId.HARMONY]: new Token(ChainId.BITTORRENT, '0x8D193c6efa90BCFf940A98785d1Ce9D093d3DC8A', 18, 'WBTT', 'Wrapped BTT')
+    [ChainId.BITTORRENT]: new Token(ChainId.BITTORRENT, '0x8D193c6efa90BCFf940A98785d1Ce9D093d3DC8A', 18, 'WBTT', 'Wrapped BTT')
   }
 
   public static readonly DXD: { [key: number]: Token } = {
