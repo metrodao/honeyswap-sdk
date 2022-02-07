@@ -98,10 +98,10 @@ export class Token extends Currency {
     ),
     [ChainId.BITTORRENT]: new Token(
       ChainId.BITTORRENT,
-      '0x1249C65AfB11D179FFB3CE7D4eEDd1D9b98AD006',
+      '0xd48788838B700ec4364E5A8e32DDcF96c9E6227E',
       18,
-      'ETH',
-      'Ethereum'
+      'bETH',
+      'Bridge Ethereum (PoS)'
     )
   }
 
