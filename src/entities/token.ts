@@ -183,7 +183,7 @@ export class Token extends Currency {
     [ChainId.FANTOM]: Token.WFTM[ChainId.FANTOM],
     [ChainId.HARMONY]: Token.WONE[ChainId.HARMONY],
     [ChainId.BITTORRENT]: Token.WBTT[ChainId.BITTORRENT],
-    [ChainId.CALLISTO]: Token.WBTT[ChainId.CALLISTO]
+    [ChainId.CALLISTO]: Token.WCLO[ChainId.CALLISTO]
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
