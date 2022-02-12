@@ -101,7 +101,15 @@ export class Token extends Currency {
       '0xd48788838B700ec4364E5A8e32DDcF96c9E6227E',
       18,
       'bETH',
-      'Bridge Ethereum (PoS)'
+      'Bridged Ethereum (PoS)'
+    ),
+    // no WETH on CALLISTO use bETH
+    [ChainId.CALLISTO]: new Token(
+      ChainId.CALLISTO,
+      '0x9A734E90D89f0c346E27c404D350Ff56DEAD55f1',
+      18,
+      'bETH',
+      'Bridged Ethereum (PoS)'
     )
   }
 
@@ -145,6 +153,10 @@ export class Token extends Currency {
     [ChainId.BITTORRENT]: new Token(ChainId.BITTORRENT, '0x8D193c6efa90BCFf940A98785d1Ce9D093d3DC8A', 18, 'WBTT', 'Wrapped BTT')
   }
 
+  public static readonly WCLO: { [key: number]: Token } = {
+    [ChainId.BITTORRENT]: new Token(ChainId.BITTORRENT, '0xF5AD6F6EDeC824C7fD54A66d241a227F6503aD3a', 18, 'WCLO', 'Wrapped CLO')
+  }
+
   public static readonly DXD: { [key: number]: Token } = {
     [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xa1d65E8fB6e87b60FECCBc582F7f97804B725521', 18, 'DXD', 'DXdao'),
     [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0x554898A0BF98aB0C03ff86C7DccBE29269cc4d29', 18, 'DXD', 'DXdao'),
@@ -170,7 +182,8 @@ export class Token extends Currency {
     [ChainId.IOTEX]: Token.WIOTX[ChainId.IOTEX],
     [ChainId.FANTOM]: Token.WFTM[ChainId.FANTOM],
     [ChainId.HARMONY]: Token.WONE[ChainId.HARMONY],
-    [ChainId.BITTORRENT]: Token.WBTT[ChainId.BITTORRENT]
+    [ChainId.BITTORRENT]: Token.WBTT[ChainId.BITTORRENT],
+    [ChainId.CALLISTO]: Token.WBTT[ChainId.CALLISTO]
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
@@ -240,3 +253,4 @@ export const WIOTX = Token.WIOTX
 export const WFTM = Token.WFTM
 export const WONE = Token.WONE
 export const WBTT = Token.WBTT
+export const WCLO = Token.WCLO

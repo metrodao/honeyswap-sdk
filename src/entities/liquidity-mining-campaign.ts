@@ -61,6 +61,10 @@ const MINIMUM_STAKED_AMOUNT_NATIVE_CURRENCY: { [chainId in ChainId]: CurrencyAmo
   [ChainId.BITTORRENT]: CurrencyAmount.nativeCurrency(
     utils.parseUnits('1000', Token.getNative(ChainId.BITTORRENT).decimals).toString(),
     ChainId.BITTORRENT
+  ),
+  [ChainId.CALLISTO]: CurrencyAmount.nativeCurrency(
+    utils.parseUnits('1000', Token.getNative(ChainId.CALLISTO).decimals).toString(),
+    ChainId.CALLISTO
   )
 }
 

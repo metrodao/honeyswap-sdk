@@ -35,7 +35,8 @@ const INITIAL_CACHE_STATE = {
   [ChainId.IOTEX]: {},
   [ChainId.FANTOM]: {},
   [ChainId.HARMONY]: {},
-  [ChainId.BITTORRENT]: {}
+  [ChainId.BITTORRENT]: {},
+  [ChainId.CALLISTO]: {}
 }
 
 let PAIR_ADDRESS_CACHE: {
