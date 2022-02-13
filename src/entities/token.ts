@@ -154,7 +154,7 @@ export class Token extends Currency {
   }
 
   public static readonly WCLO: { [key: number]: Token } = {
-    [ChainId.CALLISTO]: new Token(ChainId.CALLISTO, '0xF5AD6F6EDeC824C7fD54A66d241a227F6503aD3a', 18, 'WCLO', 'Wrapped CLO')
+    [ChainId.CALLISTO]: new Token(ChainId.CALLISTO, '0xfa1d4c53Cb8a0f0ec1C635cd5DfD68637664C07D', 18, 'WCLO.m', 'Metro Wrapped CLO')
   }
 
   public static readonly DXD: { [key: number]: Token } = {
