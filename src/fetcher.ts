@@ -47,7 +47,8 @@ const TOKEN_LOGO_URI_CACHE: {
   [ChainId.FANTOM]: {},
   [ChainId.HARMONY]: {},
   [ChainId.BITTORRENT]: {},
-  [ChainId.CALLISTO]: {}
+  [ChainId.CALLISTO]: {},
+  [ChainId.MOONBEAM]: {}
 }
 
 /**
@@ -391,7 +392,8 @@ export abstract class Fetcher {
       [250, 'https://tokens.metroswap.org/fantom.json'],
       [1666600000, 'https://tokens.metroswap.org/harmony.json'],
       [199, 'https://tokens.metroswap.org/bittorrent.json'],
-      [820, 'https://tokens.metroswap.org/callisto.json']
+      [820, 'https://tokens.metroswap.org/callisto.json'],
+      [1284, 'https://tokens.metroswap.org/moonbeam.json']
     ])
 
     // const tokenRegistryContract = new Contract(TOKEN_REGISTRY_ADDRESS[chainId], TokenRegistryAbi, provider)

@@ -110,7 +110,14 @@ export class Token extends Currency {
       18,
       'bETH',
       'Bridged Ethereum (PoS)'
-    )
+    ),
+    [ChainId.MOONBEAM]: new Token(
+        ChainId.MOONBEAM,
+        '0x30D2a9F5FDf90ACe8c17952cbb4eE48a55D916A7',
+        18,
+        'WETH',
+        'Wrapped Ether'
+      )
   }
 
   public static readonly WSPOA: { [key: number]: Token } = {
@@ -157,6 +164,10 @@ export class Token extends Currency {
     [ChainId.CALLISTO]: new Token(ChainId.CALLISTO, '0xfa1d4c53Cb8a0f0ec1C635cd5DfD68637664C07D', 18, 'WCLO.m', 'Metro Wrapped CLO')
   }
 
+  public static readonly WGLMR: { [key: number]: Token } = {
+    [ChainId.MOONBEAM]: new Token(ChainId.MOONBEAM, '0xAcc15dC74880C9944775448304B263D191c6077F', 18, 'WGLMR', 'Wrapped GLMR')
+  }
+
   public static readonly DXD: { [key: number]: Token } = {
     [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xa1d65E8fB6e87b60FECCBc582F7f97804B725521', 18, 'DXD', 'DXdao'),
     [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0x554898A0BF98aB0C03ff86C7DccBE29269cc4d29', 18, 'DXD', 'DXdao'),
@@ -183,7 +194,8 @@ export class Token extends Currency {
     [ChainId.FANTOM]: Token.WFTM[ChainId.FANTOM],
     [ChainId.HARMONY]: Token.WONE[ChainId.HARMONY],
     [ChainId.BITTORRENT]: Token.WBTT[ChainId.BITTORRENT],
-    [ChainId.CALLISTO]: Token.WCLO[ChainId.CALLISTO]
+    [ChainId.CALLISTO]: Token.WCLO[ChainId.CALLISTO],
+    [ChainId.MOONBEAM]: Token.WGLMR[ChainId.MOONBEAM]
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
@@ -254,3 +266,4 @@ export const WFTM = Token.WFTM
 export const WONE = Token.WONE
 export const WBTT = Token.WBTT
 export const WCLO = Token.WCLO
+export const WGLMR = Token.WGLMR
