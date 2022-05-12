@@ -186,7 +186,7 @@ export const INIT_CODE_HASH: { [chainId: number]: string } = {
   [ChainId.BITTORRENT]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
   [ChainId.CALLISTO]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
   [ChainId.MOONBEAM]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944', // Metroswap
-  [ChainId.MOONBEAM]: '0x3e20b29c16be1631cf504ffb5340dab1b7365e20f9d352f4a650cd60f4d179dc' // Metroswap
+  [ChainId.CELO]: '0x3e20b29c16be1631cf504ffb5340dab1b7365e20f9d352f4a650cd60f4d179dc' // Metroswap
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
