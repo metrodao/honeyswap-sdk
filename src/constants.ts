@@ -37,7 +37,7 @@ import {
   bittorrent as peripheryBittorrent,
   callisto as peripheryCallisto,
   moonbeam as peripheryMoonbeam,
-  ceo as peripheryCelo
+  celo as peripheryCelo
 } from 'dxswap-periphery/.contracts.json'
 
 // exports for external consumption
