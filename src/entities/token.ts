@@ -124,6 +124,13 @@ export class Token extends Currency {
         18,
         'WETH',
         'Wrapped Ether'
+    ),
+    [ChainId.EVMOS]: new Token(
+        ChainId.EVMOS,
+        '0x5842C5532b61aCF3227679a8b1BD0242a41752f2',
+        18,
+        'WETH',
+        'Wrapped Ether'
     )
   }
 
@@ -179,6 +186,10 @@ export class Token extends Currency {
     [ChainId.CELO]: new Token(ChainId.CELO, '0xc9616280Cc74B3B2196D32325f5278a7c2B593C4', 18, 'WCELO.m', 'Metro Wrapped CELO')
   }
 
+  public static readonly WEVMOS: { [key: number]: Token } = {
+    [ChainId.EVMOS]: new Token(ChainId.EVMOS, '	0xD4949664cD82660AaE99bEdc034a0deA8A0bd517', 18, 'WEVMOS', 'Wrapped EVMOS')
+  }
+
   public static readonly DXD: { [key: number]: Token } = {
     [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xa1d65E8fB6e87b60FECCBc582F7f97804B725521', 18, 'DXD', 'DXdao'),
     [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0x554898A0BF98aB0C03ff86C7DccBE29269cc4d29', 18, 'DXD', 'DXdao'),
@@ -207,7 +218,8 @@ export class Token extends Currency {
     [ChainId.BITTORRENT]: Token.WBTT[ChainId.BITTORRENT],
     [ChainId.CALLISTO]: Token.WCLO[ChainId.CALLISTO],
     [ChainId.MOONBEAM]: Token.WGLMR[ChainId.MOONBEAM],
-    [ChainId.CELO]: Token.WCELO[ChainId.CELO]
+    [ChainId.CELO]: Token.WCELO[ChainId.CELO],
+    [ChainId.EVMOS]: Token.WEVMOS[ChainId.EVMOS]
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
@@ -280,3 +292,4 @@ export const WBTT = Token.WBTT
 export const WCLO = Token.WCLO
 export const WGLMR = Token.WGLMR
 export const WCELO = Token.WCELO
+export const WEVMOS = Token.WEVMOS
