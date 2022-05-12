@@ -279,4 +279,4 @@ export const WONE = Token.WONE
 export const WBTT = Token.WBTT
 export const WCLO = Token.WCLO
 export const WGLMR = Token.WGLMR
-export const WCLEO = Token.WCELO
+export const WCELO = Token.WCELO
