@@ -187,7 +187,7 @@ export class Token extends Currency {
   }
 
   public static readonly WEVMOS: { [key: number]: Token } = {
-    [ChainId.EVMOS]: new Token(ChainId.EVMOS, '	0xD4949664cD82660AaE99bEdc034a0deA8A0bd517', 18, 'WEVMOS', 'Wrapped EVMOS')
+    [ChainId.EVMOS]: new Token(ChainId.EVMOS, '0xD4949664cD82660AaE99bEdc034a0deA8A0bd517', 18, 'WEVMOS', 'Wrapped EVMOS')
   }
 
   public static readonly DXD: { [key: number]: Token } = {
