@@ -37,7 +37,8 @@ const INITIAL_CACHE_STATE = {
   [ChainId.HARMONY]: {},
   [ChainId.BITTORRENT]: {},
   [ChainId.CALLISTO]: {},
-  [ChainId.MOONBEAM]: {}
+  [ChainId.MOONBEAM]: {},
+  [ChainId.CELO]: {}
 }
 
 let PAIR_ADDRESS_CACHE: {

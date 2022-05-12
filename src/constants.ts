@@ -18,7 +18,8 @@ import {
   harmony as coreHarmony,
   bittorrent as coreBittorrent,
   callisto as coreCallisto,
-  moonbeam as coreMoonbeam
+  moonbeam as coreMoonbeam,
+  celo as coreCelo
 } from 'dxswap-core/.contracts.json'
 import {
   rinkeby as peripheryRinkeby,
@@ -35,7 +36,8 @@ import {
   harmony as peripheryHarmony,
   bittorrent as peripheryBittorrent,
   callisto as peripheryCallisto,
-  moonbeam as peripheryMoonbeam
+  moonbeam as peripheryMoonbeam,
+  ceo as peripheryCelo
 } from 'dxswap-periphery/.contracts.json'
 
 // exports for external consumption
@@ -56,7 +58,8 @@ export enum ChainId {
   HARMONY = 1666600000,
   BITTORRENT = 199,
   CALLISTO = 820,
-  MOONBEAM = 1284
+  MOONBEAM = 1284,
+  CELO = 42220
 }
 
 export enum TradeType {
@@ -87,7 +90,8 @@ export const FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.HARMONY]: coreHarmony.factory,
   [ChainId.BITTORRENT]: coreBittorrent.factory,
   [ChainId.CALLISTO]: coreCallisto.factory,
-  [ChainId.MOONBEAM]: coreMoonbeam.factory
+  [ChainId.MOONBEAM]: coreMoonbeam.factory,
+  [ChainId.CELO]: coreCelo.factory
 }
 
 export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
@@ -105,7 +109,8 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
   [ChainId.HARMONY]: peripheryHarmony.router,
   [ChainId.BITTORRENT]: peripheryBittorrent.router,
   [ChainId.CALLISTO]: peripheryCallisto.router,
-  [ChainId.MOONBEAM]: peripheryMoonbeam.router
+  [ChainId.MOONBEAM]: peripheryMoonbeam.router,
+  [ChainId.CELO]: peripheryCelo.router
 }
 
 export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
@@ -123,7 +128,8 @@ export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.HARMONY]: '0x0000000000000000000000000000000000001234',
   [ChainId.BITTORRENT]: '0x0000000000000000000000000000000000001234',
   [ChainId.CALLISTO]: '0x0000000000000000000000000000000000001234',
-  [ChainId.MOONBEAM]: '0x0000000000000000000000000000000000001234'
+  [ChainId.MOONBEAM]: '0x0000000000000000000000000000000000001234',
+  [ChainId.CELO]: '0x0000000000000000000000000000000000001234'
 }
 
 export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
@@ -141,7 +147,8 @@ export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.HARMONY]: '0x0000000000000000000000000000000000001234',
   [ChainId.BITTORRENT]: '0x0000000000000000000000000000000000001234',
   [ChainId.CALLISTO]: '0x0000000000000000000000000000000000001234',
-  [ChainId.MOONBEAM]: '0x0000000000000000000000000000000000001234'
+  [ChainId.MOONBEAM]: '0x0000000000000000000000000000000000001234',
+  [ChainId.CELO]: '0x0000000000000000000000000000000000001234'
 }
 
 export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
@@ -159,7 +166,8 @@ export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
   [ChainId.HARMONY]: 1666600000,
   [ChainId.BITTORRENT]: 199,
   [ChainId.CALLISTO]: 820,
-  [ChainId.MOONBEAM]: 1284
+  [ChainId.MOONBEAM]: 1284,
+  [ChainId.CELO]: 42220
 }
 
 export const INIT_CODE_HASH: { [chainId: number]: string } = {
@@ -177,7 +185,8 @@ export const INIT_CODE_HASH: { [chainId: number]: string } = {
   [ChainId.HARMONY]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
   [ChainId.BITTORRENT]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
   [ChainId.CALLISTO]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
-  [ChainId.MOONBEAM]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944' // Metroswap
+  [ChainId.MOONBEAM]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944', // Metroswap
+  [ChainId.MOONBEAM]: '0x3e20b29c16be1631cf504ffb5340dab1b7365e20f9d352f4a650cd60f4d179dc' // Metroswap
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
@@ -224,7 +233,8 @@ const PERMISSIVE_MULTICALL_ADDRESS: { [chainId: number]: string } = {
   [ChainId.HARMONY]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09',
   [ChainId.BITTORRENT]: '0x31F9101A7EfD146BD6bc2BBC99D3AAc7f8ae0986',
   [ChainId.CALLISTO]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09',
-  [ChainId.MOONBEAM]: '0xc9616280Cc74B3B2196D32325f5278a7c2B593C4'
+  [ChainId.MOONBEAM]: '0xc9616280Cc74B3B2196D32325f5278a7c2B593C4',
+  [ChainId.CELO]: '0x9053e6DB24b28A75CD31020B4Aa4B66Af86d53B4'
 }
 
 export {

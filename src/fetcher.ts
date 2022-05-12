@@ -48,7 +48,8 @@ const TOKEN_LOGO_URI_CACHE: {
   [ChainId.HARMONY]: {},
   [ChainId.BITTORRENT]: {},
   [ChainId.CALLISTO]: {},
-  [ChainId.MOONBEAM]: {}
+  [ChainId.MOONBEAM]: {},
+  [ChainId.CELO]: {}
 }
 
 /**
@@ -383,7 +384,7 @@ export abstract class Fetcher {
   public static async fetchDxDaoTokenList(chainId: ChainId): Promise<TokenList> {
     const tokenListUrl = new Map([
       [1, 'https://tokens.coingecko.com/uniswap/all.json'],
-      [100, 'https://tokens.metroswap.org'],
+      [100, 'https://tokens.metroswap.org/xdai.json'],
       [137, 'https://tokens.metroswap.org'],
       [43114, 'https://tokens.metroswap.org/avalanche.json'],
       [56, 'https://tokens.metroswap.org/binance.json'],
@@ -393,7 +394,8 @@ export abstract class Fetcher {
       [1666600000, 'https://tokens.metroswap.org/harmony.json'],
       [199, 'https://tokens.metroswap.org/bittorrent.json'],
       [820, 'https://tokens.metroswap.org/callisto.json'],
-      [1284, 'https://tokens.metroswap.org/moonbeam.json']
+      [1284, 'https://tokens.metroswap.org/moonbeam.json'],
+      [42220, 'https://tokens.metroswap.org/celo.json']
     ])
 
     // const tokenRegistryContract = new Contract(TOKEN_REGISTRY_ADDRESS[chainId], TokenRegistryAbi, provider)
