@@ -33,6 +33,7 @@ export class Currency {
   public static readonly GLMR: Currency = new Currency(18, 'GLMR', 'Moonbeam')
   public static readonly CELO: Currency = new Currency(18, 'CELO', 'Celo')
   public static readonly EVMOS: Currency = new Currency(18, 'EVMOS', 'Evmos')
+  public static readonly ASTAR: Currency = new Currency(18, 'ASTAR', 'Astar')
 
   private static readonly NATIVE_CURRENCY: { [chainId in ChainId]: Currency } = {
     [ChainId.MAINNET]: Currency.ETHER,
@@ -51,7 +52,8 @@ export class Currency {
     [ChainId.CALLISTO]: Currency.CLO,
     [ChainId.MOONBEAM]: Currency.GLMR,
     [ChainId.CELO]: Currency.CELO,
-    [ChainId.EVMOS]: Currency.EVMOS
+    [ChainId.EVMOS]: Currency.EVMOS,
+    [ChainId.ASTAR]: Currency.ASTAR
   }
 
   /**
@@ -94,3 +96,4 @@ export const CLO = Currency.CLO
 export const GLMR = Currency.GLMR
 export const CELO = Currency.CELO
 export const EVMOS = Currency.EVMOS
+export const ASTAR = Currency.ASTAR

@@ -50,7 +50,8 @@ const TOKEN_LOGO_URI_CACHE: {
   [ChainId.CALLISTO]: {},
   [ChainId.MOONBEAM]: {},
   [ChainId.CELO]: {},
-  [ChainId.EVMOS]: {}
+  [ChainId.EVMOS]: {},
+  [ChainId.ASTAR]: {}
 }
 
 /**
@@ -397,7 +398,8 @@ export abstract class Fetcher {
       [820, 'https://tokens.metroswap.org/callisto.json'],
       [1284, 'https://tokens.metroswap.org/moonbeam.json'],
       [42220, 'https://tokens.metroswap.org/celo.json'],
-      [9001, 'https://tokens.metroswap.org/evmos.json']
+      [9001, 'https://tokens.metroswap.org/evmos.json'],
+      [592, 'https://tokens.metroswap.org/evmos.json']
     ])
 
     // const tokenRegistryContract = new Contract(TOKEN_REGISTRY_ADDRESS[chainId], TokenRegistryAbi, provider)

@@ -75,8 +75,12 @@ const MINIMUM_STAKED_AMOUNT_NATIVE_CURRENCY: { [chainId in ChainId]: CurrencyAmo
     ChainId.CELO
   ),
   [ChainId.EVMOS]: CurrencyAmount.nativeCurrency(
-    utils.parseUnits('1000', Token.getNative(ChainId.CELO).decimals).toString(),
+    utils.parseUnits('1000', Token.getNative(ChainId.EVMOS).decimals).toString(),
     ChainId.EVMOS
+  ),
+  [ChainId.ASTAR]: CurrencyAmount.nativeCurrency(
+    utils.parseUnits('1000', Token.getNative(ChainId.ASTAR).decimals).toString(),
+    ChainId.ASTAR
   )
 }
 

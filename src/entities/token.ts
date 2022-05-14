@@ -131,6 +131,13 @@ export class Token extends Currency {
         18,
         'WETH',
         'Wrapped Ether'
+    ),
+    [ChainId.ASTAR]: new Token(
+        ChainId.ASTAR,
+        '0x81ECac0D6Be0550A00FF064a4f9dd2400585FE9c',
+        18,
+        'WETH',
+        'Wrapped Ether'
     )
   }
 
@@ -190,6 +197,10 @@ export class Token extends Currency {
     [ChainId.EVMOS]: new Token(ChainId.EVMOS, '0xD4949664cD82660AaE99bEdc034a0deA8A0bd517', 18, 'WEVMOS', 'Wrapped EVMOS')
   }
 
+  public static readonly WASTAR: { [key: number]: Token } = {
+    [ChainId.ASTAR]: new Token(ChainId.ASTAR, '0xAeaaf0e2c81Af264101B9129C00F4440cCF0F720', 18, 'WASTAR', 'Wrapped ASTAR')
+  }
+
   public static readonly DXD: { [key: number]: Token } = {
     [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xa1d65E8fB6e87b60FECCBc582F7f97804B725521', 18, 'DXD', 'DXdao'),
     [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0x554898A0BF98aB0C03ff86C7DccBE29269cc4d29', 18, 'DXD', 'DXdao'),
@@ -219,7 +230,8 @@ export class Token extends Currency {
     [ChainId.CALLISTO]: Token.WCLO[ChainId.CALLISTO],
     [ChainId.MOONBEAM]: Token.WGLMR[ChainId.MOONBEAM],
     [ChainId.CELO]: Token.WCELO[ChainId.CELO],
-    [ChainId.EVMOS]: Token.WEVMOS[ChainId.EVMOS]
+    [ChainId.EVMOS]: Token.WEVMOS[ChainId.EVMOS],
+    [ChainId.ASTAR]: Token.WASTAR[ChainId.ASTAR]
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
@@ -293,3 +305,4 @@ export const WCLO = Token.WCLO
 export const WGLMR = Token.WGLMR
 export const WCELO = Token.WCELO
 export const WEVMOS = Token.WEVMOS
+export const WASTAR = Token.WASTAR
