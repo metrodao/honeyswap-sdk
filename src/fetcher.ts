@@ -399,7 +399,7 @@ export abstract class Fetcher {
       [1284, 'https://tokens.metroswap.org/moonbeam.json'],
       [42220, 'https://tokens.metroswap.org/celo.json'],
       [9001, 'https://tokens.metroswap.org/evmos.json'],
-      [592, 'https://tokens.metroswap.org/evmos.json']
+      [592, 'https://tokens.metroswap.org/astar.json']
     ])
 
     // const tokenRegistryContract = new Contract(TOKEN_REGISTRY_ADDRESS[chainId], TokenRegistryAbi, provider)
