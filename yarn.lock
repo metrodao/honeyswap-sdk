@@ -2624,15 +2624,15 @@ domexception@^1.0.1:
     webidl-conversions "^4.0.2"
 
 "dxswap-core@https://github.com/metrodao/dxswap-core.git", "dxswap-core@https://github.com/metrodao/dxswap-core.git#master":
-  version "0.5.2"
-  uid d1c18843aeda4abbec83dea4978d737132b54072
-  resolved "https://github.com/metrodao/dxswap-core.git#d1c18843aeda4abbec83dea4978d737132b54072"
+  version "0.5.3"
+  uid "6924eaa5260ae6abf0a3cae2493120ebcd5aadb2"
+  resolved "https://github.com/metrodao/dxswap-core.git#6924eaa5260ae6abf0a3cae2493120ebcd5aadb2"
   dependencies:
     typescript "^3.9.5"
 
 "dxswap-periphery@https://github.com/metrodao/dxswap-periphery.git#master":
-  version "0.5.2"
-  resolved "https://github.com/metrodao/dxswap-periphery.git#d09f577440e681a98a36c417d277d905f01889aa"
+  version "0.5.3"
+  resolved "https://github.com/metrodao/dxswap-periphery.git#c5b0831157e205e007add6ba15d38399fcc21ede"
   dependencies:
     dxswap-core "https://github.com/metrodao/dxswap-core.git"
 
