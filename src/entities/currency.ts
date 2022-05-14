@@ -34,7 +34,7 @@ export class Currency {
   public static readonly CELO: Currency = new Currency(18, 'CELO', 'Celo')
   public static readonly EVMOS: Currency = new Currency(18, 'EVMOS', 'Evmos')
   public static readonly ASTAR: Currency = new Currency(18, 'ASTAR', 'Astar')
-  public static readonly SMARTBCH: Currency = new Currency(18, 'ASTAR', 'Astar')
+  public static readonly SMARTBCH: Currency = new Currency(18, 'BCH', 'SmartBCH')
 
   private static readonly NATIVE_CURRENCY: { [chainId in ChainId]: Currency } = {
     [ChainId.MAINNET]: Currency.ETHER,
