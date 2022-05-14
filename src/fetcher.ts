@@ -51,7 +51,8 @@ const TOKEN_LOGO_URI_CACHE: {
   [ChainId.MOONBEAM]: {},
   [ChainId.CELO]: {},
   [ChainId.EVMOS]: {},
-  [ChainId.ASTAR]: {}
+  [ChainId.ASTAR]: {},
+  [ChainId.SMARTBCH]: {}
 }
 
 /**
@@ -399,7 +400,8 @@ export abstract class Fetcher {
       [1284, 'https://tokens.metroswap.org/moonbeam.json'],
       [42220, 'https://tokens.metroswap.org/celo.json'],
       [9001, 'https://tokens.metroswap.org/evmos.json'],
-      [592, 'https://tokens.metroswap.org/astar.json']
+      [592, 'https://tokens.metroswap.org/astar.json'],
+      [10000, 'https://tokens.metroswap.org/smartbch.json']
     ])
 
     // const tokenRegistryContract = new Contract(TOKEN_REGISTRY_ADDRESS[chainId], TokenRegistryAbi, provider)

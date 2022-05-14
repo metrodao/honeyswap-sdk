@@ -40,7 +40,8 @@ const INITIAL_CACHE_STATE = {
   [ChainId.MOONBEAM]: {},
   [ChainId.CELO]: {},
   [ChainId.EVMOS]: {},
-  [ChainId.ASTAR]: {}
+  [ChainId.ASTAR]: {},
+  [ChainId.SMARTBCH]: {}
 }
 
 let PAIR_ADDRESS_CACHE: {
