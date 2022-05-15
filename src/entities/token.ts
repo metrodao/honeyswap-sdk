@@ -145,6 +145,13 @@ export class Token extends Currency {
         18,
         'METH',
         'Metro Wrapped Ether'
+    ),
+    [ChainId.TELOS]: new Token(
+        ChainId.TELOS,
+        '0xfA9343C3897324496A05fC75abeD6bAC29f8A40f',
+        18,
+        'ETH',
+        'Ethereum'
     )
   }
 
@@ -212,6 +219,10 @@ export class Token extends Currency {
     [ChainId.SMARTBCH]: new Token(ChainId.SMARTBCH, '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04', 18, 'WBCH', 'Wrapped BCH')
   }
 
+  public static readonly WTLOS: { [key: number]: Token } = {
+    [ChainId.TELOS]: new Token(ChainId.TELOS, '0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E', 18, 'WTLOS', 'Wrapped TLOS')
+  }
+
   public static readonly DXD: { [key: number]: Token } = {
     [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xa1d65E8fB6e87b60FECCBc582F7f97804B725521', 18, 'DXD', 'DXdao'),
     [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0x554898A0BF98aB0C03ff86C7DccBE29269cc4d29', 18, 'DXD', 'DXdao'),
@@ -243,7 +254,8 @@ export class Token extends Currency {
     [ChainId.CELO]: Token.WCELO[ChainId.CELO],
     [ChainId.EVMOS]: Token.WEVMOS[ChainId.EVMOS],
     [ChainId.ASTAR]: Token.WASTAR[ChainId.ASTAR],
-    [ChainId.SMARTBCH]: Token.WBCH[ChainId.SMARTBCH]
+    [ChainId.SMARTBCH]: Token.WBCH[ChainId.SMARTBCH],
+    [ChainId.TELOS]: Token.WBCH[ChainId.TELOS]
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
@@ -319,3 +331,4 @@ export const WCELO = Token.WCELO
 export const WEVMOS = Token.WEVMOS
 export const WASTAR = Token.WASTAR
 export const WBCH = Token.WBCH
+export const WTLOS = Token.WTLOS

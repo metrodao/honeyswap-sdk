@@ -22,7 +22,8 @@ import {
   celo as coreCelo,
   evmos as coreEvmos,
   astar as coreAstar,
-  smartbch as coreSmartBCH
+  smartbch as coreSmartBCH,
+  telos as coreTelos
 } from 'dxswap-core/.contracts.json'
 import {
   rinkeby as peripheryRinkeby,
@@ -43,7 +44,8 @@ import {
   celo as peripheryCelo,
   evmos as peripheryEvmos,
   astar as peripheryAstar,
-  smartbch as peripherySmartBCH
+  smartbch as peripherySmartBCH,
+  telos as peripheryTelos
 } from 'dxswap-periphery/.contracts.json'
 
 // exports for external consumption
@@ -68,7 +70,8 @@ export enum ChainId {
   CELO = 42220,
   EVMOS = 9001,
   ASTAR = 592,
-  SMARTBCH = 10000
+  SMARTBCH = 10000,
+  TELOS = 40
 }
 
 export enum TradeType {
@@ -103,7 +106,8 @@ export const FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.CELO]: coreCelo.factory,
   [ChainId.EVMOS]: coreEvmos.factory,
   [ChainId.ASTAR]: coreAstar.factory,
-  [ChainId.SMARTBCH]: coreSmartBCH.factory
+  [ChainId.SMARTBCH]: coreSmartBCH.factory,
+  [ChainId.TELOS]: coreTelos.factory
 }
 
 export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
@@ -125,7 +129,8 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
   [ChainId.CELO]: peripheryCelo.router,
   [ChainId.EVMOS]: peripheryEvmos.router,
   [ChainId.ASTAR]: peripheryAstar.router,
-  [ChainId.SMARTBCH]: peripherySmartBCH.router
+  [ChainId.SMARTBCH]: peripherySmartBCH.router,
+  [ChainId.TELOS]: peripheryTelos.router
 }
 
 export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
@@ -147,7 +152,8 @@ export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.CELO]: '0x0000000000000000000000000000000000001234',
   [ChainId.EVMOS]: '0x0000000000000000000000000000000000001234',
   [ChainId.ASTAR]: '0x0000000000000000000000000000000000001234',
-  [ChainId.SMARTBCH]: '0x0000000000000000000000000000000000001234'
+  [ChainId.SMARTBCH]: '0x0000000000000000000000000000000000001234',
+  [ChainId.TELOS]: '0x0000000000000000000000000000000000001234'
 }
 
 export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
@@ -169,7 +175,8 @@ export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.CELO]: '0x0000000000000000000000000000000000001234',
   [ChainId.EVMOS]: '0x0000000000000000000000000000000000001234',
   [ChainId.ASTAR]: '0x0000000000000000000000000000000000001234',
-  [ChainId.SMARTBCH]: '0x0000000000000000000000000000000000001234'
+  [ChainId.SMARTBCH]: '0x0000000000000000000000000000000000001234',
+  [ChainId.TELOS]: '0x0000000000000000000000000000000000001234'
 }
 
 export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
@@ -191,7 +198,8 @@ export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
   [ChainId.CELO]: 42220,
   [ChainId.EVMOS]: 9001,
   [ChainId.ASTAR]: 592,
-  [ChainId.SMARTBCH]: 10000
+  [ChainId.SMARTBCH]: 10000,
+  [ChainId.TELOS]: 40
 }
 
 export const INIT_CODE_HASH: { [chainId: number]: string } = {
@@ -200,20 +208,21 @@ export const INIT_CODE_HASH: { [chainId: number]: string } = {
   [ChainId.ARBITRUM_TESTNET_V3]: '0xd306a548755b9295ee49cc729e13ca4a45e00199bbd890fa146da43a50571776', // Swapr
   [ChainId.SOKOL]: '0xd306a548755b9295ee49cc729e13ca4a45e00199bbd890fa146da43a50571776', // Swapr
   [ChainId.XDAI]: '0xa45b6881271b3d945937baee765df5f40c309498fbe1fa5ec32505dce8ae790d', // Metroswap
-  [ChainId.MATIC]: '0xa45b6881271b3d945937baee765df5f40c309498fbe1fa5ec32505dce8ae790d', // Metroswap
-  [ChainId.AVALANCHE]: '0xa45b6881271b3d945937baee765df5f40c309498fbe1fa5ec32505dce8ae790d', // Metroswap
-  [ChainId.BINANCE]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
-  [ChainId.FUSE]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
-  [ChainId.IOTEX]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
-  [ChainId.FANTOM]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
-  [ChainId.HARMONY]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
-  [ChainId.BITTORRENT]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
-  [ChainId.CALLISTO]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88', // Metroswap
-  [ChainId.MOONBEAM]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944', // Metroswap
-  [ChainId.CELO]: '0x3e20b29c16be1631cf504ffb5340dab1b7365e20f9d352f4a650cd60f4d179dc', // Metroswap
-  [ChainId.EVMOS]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944', // Metroswap
-  [ChainId.ASTAR]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944', // Metroswap
-  [ChainId.SMARTBCH]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944'
+  [ChainId.MATIC]: '0xa45b6881271b3d945937baee765df5f40c309498fbe1fa5ec32505dce8ae790d',
+  [ChainId.AVALANCHE]: '0xa45b6881271b3d945937baee765df5f40c309498fbe1fa5ec32505dce8ae790d',
+  [ChainId.BINANCE]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88',
+  [ChainId.FUSE]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88',
+  [ChainId.IOTEX]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88',
+  [ChainId.FANTOM]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88',
+  [ChainId.HARMONY]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88',
+  [ChainId.BITTORRENT]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88',
+  [ChainId.CALLISTO]: '0xf061f72f1779d85d1899dde73c3203c068e2e722922b3ecfc59e6505e9a5ea88',
+  [ChainId.MOONBEAM]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944',
+  [ChainId.CELO]: '0x3e20b29c16be1631cf504ffb5340dab1b7365e20f9d352f4a650cd60f4d179dc',
+  [ChainId.EVMOS]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944',
+  [ChainId.ASTAR]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944',
+  [ChainId.SMARTBCH]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944',
+  [ChainId.TELOS]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944'
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
@@ -264,7 +273,8 @@ const PERMISSIVE_MULTICALL_ADDRESS: { [chainId: number]: string } = {
   [ChainId.CELO]: '0x9053e6DB24b28A75CD31020B4Aa4B66Af86d53B4',
   [ChainId.EVMOS]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09',
   [ChainId.ASTAR]: '0x861aa52B81A16E146E1f8D39B6C8BdC072d8348d',
-  [ChainId.SMARTBCH]: '0x9D8Ce0D200d220bB364b7566E6490F094782C7d4'
+  [ChainId.SMARTBCH]: '0x9D8Ce0D200d220bB364b7566E6490F094782C7d4',
+  [ChainId.TELOS]: '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408'
 }
 
 export {
