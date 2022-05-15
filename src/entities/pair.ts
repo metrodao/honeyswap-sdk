@@ -43,7 +43,8 @@ const INITIAL_CACHE_STATE = {
   [ChainId.ASTAR]: {},
   [ChainId.SMARTBCH]: {},
   [ChainId.TELOS]: {},
-  [ChainId.ZYX]: {}
+  [ChainId.ZYX]: {},
+  [ChainId.THUNDERCORE]: {}
 }
 
 let PAIR_ADDRESS_CACHE: {

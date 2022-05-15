@@ -93,6 +93,10 @@ const MINIMUM_STAKED_AMOUNT_NATIVE_CURRENCY: { [chainId in ChainId]: CurrencyAmo
   [ChainId.ZYX]: CurrencyAmount.nativeCurrency(
     utils.parseUnits('1000', Token.getNative(ChainId.ZYX).decimals).toString(),
     ChainId.ZYX
+  ),
+  [ChainId.THUNDERCORE]: CurrencyAmount.nativeCurrency(
+    utils.parseUnits('1000', Token.getNative(ChainId.THUNDERCORE).decimals).toString(),
+    ChainId.THUNDERCORE
   )
 }
 

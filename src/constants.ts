@@ -24,7 +24,8 @@ import {
   astar as coreAstar,
   smartbch as coreSmartBCH,
   telos as coreTelos,
-  zyx as coreZyx
+  zyx as coreZyx,
+  thundercore as coreThunderCore
 } from 'dxswap-core/.contracts.json'
 import {
   rinkeby as peripheryRinkeby,
@@ -47,7 +48,8 @@ import {
   astar as peripheryAstar,
   smartbch as peripherySmartBCH,
   telos as peripheryTelos,
-  zyx as peripheryZyx
+  zyx as peripheryZyx,
+  thundercore as peripheryThunderCore
 } from 'dxswap-periphery/.contracts.json'
 
 // exports for external consumption
@@ -74,7 +76,8 @@ export enum ChainId {
   ASTAR = 592,
   SMARTBCH = 10000,
   TELOS = 40,
-  ZYX = 55
+  ZYX = 55,
+  THUNDERCORE = 108
 }
 
 export enum TradeType {
@@ -111,7 +114,8 @@ export const FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.ASTAR]: coreAstar.factory,
   [ChainId.SMARTBCH]: coreSmartBCH.factory,
   [ChainId.TELOS]: coreTelos.factory,
-  [ChainId.ZYX]: coreZyx.factory
+  [ChainId.ZYX]: coreZyx.factory,
+  [ChainId.THUNDERCORE]: coreThunderCore.factory
 }
 
 export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
@@ -135,7 +139,8 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
   [ChainId.ASTAR]: peripheryAstar.router,
   [ChainId.SMARTBCH]: peripherySmartBCH.router,
   [ChainId.TELOS]: peripheryTelos.router,
-  [ChainId.ZYX]: peripheryZyx.router
+  [ChainId.ZYX]: peripheryZyx.router,
+  [ChainId.THUNDERCORE]: peripheryThunderCore.router
 }
 
 export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
@@ -159,7 +164,8 @@ export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.ASTAR]: '0x0000000000000000000000000000000000001234',
   [ChainId.SMARTBCH]: '0x0000000000000000000000000000000000001234',
   [ChainId.TELOS]: '0x0000000000000000000000000000000000001234',
-  [ChainId.ZYX]: '0x0000000000000000000000000000000000001234'
+  [ChainId.ZYX]: '0x0000000000000000000000000000000000001234',
+  [ChainId.THUNDERCORE]: '0x0000000000000000000000000000000000001234'
 }
 
 export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
@@ -183,7 +189,8 @@ export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.ASTAR]: '0x0000000000000000000000000000000000001234',
   [ChainId.SMARTBCH]: '0x0000000000000000000000000000000000001234',
   [ChainId.TELOS]: '0x0000000000000000000000000000000000001234',
-  [ChainId.ZYX]: '0x0000000000000000000000000000000000001234'
+  [ChainId.ZYX]: '0x0000000000000000000000000000000000001234',
+  [ChainId.THUNDERCORE]: '0x0000000000000000000000000000000000001234'
 }
 
 export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
@@ -207,7 +214,8 @@ export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
   [ChainId.ASTAR]: 592,
   [ChainId.SMARTBCH]: 10000,
   [ChainId.TELOS]: 40,
-  [ChainId.ZYX]: 55
+  [ChainId.ZYX]: 55,
+  [ChainId.THUNDERCORE]: 108
 }
 
 export const INIT_CODE_HASH: { [chainId: number]: string } = {
@@ -231,7 +239,8 @@ export const INIT_CODE_HASH: { [chainId: number]: string } = {
   [ChainId.ASTAR]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944',
   [ChainId.SMARTBCH]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944',
   [ChainId.TELOS]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944',
-  [ChainId.ZYX]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944'
+  [ChainId.ZYX]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944',
+  [ChainId.THUNDERCORE]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944'
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
@@ -284,7 +293,8 @@ const PERMISSIVE_MULTICALL_ADDRESS: { [chainId: number]: string } = {
   [ChainId.ASTAR]: '0x861aa52B81A16E146E1f8D39B6C8BdC072d8348d',
   [ChainId.SMARTBCH]: '0x9D8Ce0D200d220bB364b7566E6490F094782C7d4',
   [ChainId.TELOS]: '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408',
-  [ChainId.ZYX]: '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408'
+  [ChainId.ZYX]: '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408',
+  [ChainId.THUNDERCORE]: '0x9A734E90D89f0c346E27c404D350Ff56DEAD55f1'
 }
 
 export {
