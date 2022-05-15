@@ -42,7 +42,8 @@ const INITIAL_CACHE_STATE = {
   [ChainId.EVMOS]: {},
   [ChainId.ASTAR]: {},
   [ChainId.SMARTBCH]: {},
-  [ChainId.TELOS]: {}
+  [ChainId.TELOS]: {},
+  [ChainId.ZYX]: {}
 }
 
 let PAIR_ADDRESS_CACHE: {

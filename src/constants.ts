@@ -23,7 +23,8 @@ import {
   evmos as coreEvmos,
   astar as coreAstar,
   smartbch as coreSmartBCH,
-  telos as coreTelos
+  telos as coreTelos,
+  zyx as coreZyx
 } from 'dxswap-core/.contracts.json'
 import {
   rinkeby as peripheryRinkeby,
@@ -45,7 +46,8 @@ import {
   evmos as peripheryEvmos,
   astar as peripheryAstar,
   smartbch as peripherySmartBCH,
-  telos as peripheryTelos
+  telos as peripheryTelos,
+  zyx as peripheryZyx
 } from 'dxswap-periphery/.contracts.json'
 
 // exports for external consumption
@@ -71,7 +73,8 @@ export enum ChainId {
   EVMOS = 9001,
   ASTAR = 592,
   SMARTBCH = 10000,
-  TELOS = 40
+  TELOS = 40,
+  ZYX = 55
 }
 
 export enum TradeType {
@@ -107,7 +110,8 @@ export const FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.EVMOS]: coreEvmos.factory,
   [ChainId.ASTAR]: coreAstar.factory,
   [ChainId.SMARTBCH]: coreSmartBCH.factory,
-  [ChainId.TELOS]: coreTelos.factory
+  [ChainId.TELOS]: coreTelos.factory,
+  [ChainId.ZYX]: coreZyx.factory
 }
 
 export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
@@ -130,7 +134,8 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
   [ChainId.EVMOS]: peripheryEvmos.router,
   [ChainId.ASTAR]: peripheryAstar.router,
   [ChainId.SMARTBCH]: peripherySmartBCH.router,
-  [ChainId.TELOS]: peripheryTelos.router
+  [ChainId.TELOS]: peripheryTelos.router,
+  [ChainId.ZYX]: peripheryZyx.router
 }
 
 export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
@@ -153,7 +158,8 @@ export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.EVMOS]: '0x0000000000000000000000000000000000001234',
   [ChainId.ASTAR]: '0x0000000000000000000000000000000000001234',
   [ChainId.SMARTBCH]: '0x0000000000000000000000000000000000001234',
-  [ChainId.TELOS]: '0x0000000000000000000000000000000000001234'
+  [ChainId.TELOS]: '0x0000000000000000000000000000000000001234',
+  [ChainId.ZYX]: '0x0000000000000000000000000000000000001234'
 }
 
 export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
@@ -176,7 +182,8 @@ export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.EVMOS]: '0x0000000000000000000000000000000000001234',
   [ChainId.ASTAR]: '0x0000000000000000000000000000000000001234',
   [ChainId.SMARTBCH]: '0x0000000000000000000000000000000000001234',
-  [ChainId.TELOS]: '0x0000000000000000000000000000000000001234'
+  [ChainId.TELOS]: '0x0000000000000000000000000000000000001234',
+  [ChainId.ZYX]: '0x0000000000000000000000000000000000001234'
 }
 
 export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
@@ -199,7 +206,8 @@ export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
   [ChainId.EVMOS]: 9001,
   [ChainId.ASTAR]: 592,
   [ChainId.SMARTBCH]: 10000,
-  [ChainId.TELOS]: 40
+  [ChainId.TELOS]: 40,
+  [ChainId.ZYX]: 55
 }
 
 export const INIT_CODE_HASH: { [chainId: number]: string } = {
@@ -222,7 +230,8 @@ export const INIT_CODE_HASH: { [chainId: number]: string } = {
   [ChainId.EVMOS]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944',
   [ChainId.ASTAR]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944',
   [ChainId.SMARTBCH]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944',
-  [ChainId.TELOS]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944'
+  [ChainId.TELOS]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944',
+  [ChainId.ZYX]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944'
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
@@ -274,7 +283,8 @@ const PERMISSIVE_MULTICALL_ADDRESS: { [chainId: number]: string } = {
   [ChainId.EVMOS]: '0x95C2D32fDb32EDA8ce7fbF6539Dd6945acb9bB09',
   [ChainId.ASTAR]: '0x861aa52B81A16E146E1f8D39B6C8BdC072d8348d',
   [ChainId.SMARTBCH]: '0x9D8Ce0D200d220bB364b7566E6490F094782C7d4',
-  [ChainId.TELOS]: '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408'
+  [ChainId.TELOS]: '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408',
+  [ChainId.ZYX]: '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408'
 }
 
 export {

@@ -36,6 +36,7 @@ export class Currency {
   public static readonly ASTAR: Currency = new Currency(18, 'ASTAR', 'Astar')
   public static readonly SMARTBCH: Currency = new Currency(18, 'BCH', 'SmartBCH')
   public static readonly TELOS: Currency = new Currency(18, 'TLOS', 'Telos')
+  public static readonly ZYX: Currency = new Currency(18, 'ZYX', 'Zyx')
 
   private static readonly NATIVE_CURRENCY: { [chainId in ChainId]: Currency } = {
     [ChainId.MAINNET]: Currency.ETHER,
@@ -57,7 +58,8 @@ export class Currency {
     [ChainId.EVMOS]: Currency.EVMOS,
     [ChainId.ASTAR]: Currency.ASTAR,
     [ChainId.SMARTBCH]: Currency.SMARTBCH,
-    [ChainId.TELOS]: Currency.TELOS
+    [ChainId.TELOS]: Currency.TELOS,
+    [ChainId.ZYX]: Currency.ZYX
   }
 
   /**
@@ -103,3 +105,4 @@ export const EVMOS = Currency.EVMOS
 export const ASTAR = Currency.ASTAR
 export const SMARTBCH = Currency.SMARTBCH
 export const TELOS = Currency.TELOS
+export const ZYX = Currency.ZYX
