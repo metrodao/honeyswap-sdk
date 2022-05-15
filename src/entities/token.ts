@@ -255,7 +255,7 @@ export class Token extends Currency {
     [ChainId.EVMOS]: Token.WEVMOS[ChainId.EVMOS],
     [ChainId.ASTAR]: Token.WASTAR[ChainId.ASTAR],
     [ChainId.SMARTBCH]: Token.WBCH[ChainId.SMARTBCH],
-    [ChainId.TELOS]: Token.WBCH[ChainId.TELOS]
+    [ChainId.TELOS]: Token.WTLOS[ChainId.TELOS]
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
