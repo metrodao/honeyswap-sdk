@@ -84,6 +84,9 @@ let PAIR_ADDRESS_CACHE: {
   },
   [RoutablePlatform.POLYCAT.name]: {
     ...INITIAL_CACHE_STATE
+  },
+  [RoutablePlatform.SPOOKYFI.name]: {
+    ...INITIAL_CACHE_STATE
   }
 }
 
