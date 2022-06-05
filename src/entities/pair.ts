@@ -90,6 +90,9 @@ let PAIR_ADDRESS_CACHE: {
   },
   [RoutablePlatform.TOMBSWAP.name]: {
     ...INITIAL_CACHE_STATE
+  },
+  [RoutablePlatform.DEFIKINGDOMS.name]: {
+    ...INITIAL_CACHE_STATE
   }
 }
 
