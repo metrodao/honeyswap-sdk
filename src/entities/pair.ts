@@ -81,6 +81,9 @@ let PAIR_ADDRESS_CACHE: {
   },
   [RoutablePlatform.RADIOSHACK.name]: {
     ...INITIAL_CACHE_STATE
+  },
+  [RoutablePlatform.POLYCAT.name]: {
+    ...INITIAL_CACHE_STATE
   }
 }
 
