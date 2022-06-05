@@ -87,6 +87,9 @@ let PAIR_ADDRESS_CACHE: {
   },
   [RoutablePlatform.SPOOKYFI.name]: {
     ...INITIAL_CACHE_STATE
+  },
+  [RoutablePlatform.TOMBSWAP.name]: {
+    ...INITIAL_CACHE_STATE
   }
 }
 
