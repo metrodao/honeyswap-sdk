@@ -75,6 +75,9 @@ let PAIR_ADDRESS_CACHE: {
   },
   [RoutablePlatform.APESWAP.name]: {
     ...INITIAL_CACHE_STATE
+  },
+  [RoutablePlatform.DFYN.name]: {
+    ...INITIAL_CACHE_STATE
   }
 }
 
