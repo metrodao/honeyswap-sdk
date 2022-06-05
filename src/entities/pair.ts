@@ -72,6 +72,9 @@ let PAIR_ADDRESS_CACHE: {
   },
   [RoutablePlatform.QUICKSWAP.name]: {
     ...INITIAL_CACHE_STATE
+  },
+  [RoutablePlatform.APESWAP.name]: {
+    ...INITIAL_CACHE_STATE
   }
 }
 
