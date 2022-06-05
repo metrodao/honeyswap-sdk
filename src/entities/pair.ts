@@ -78,6 +78,9 @@ let PAIR_ADDRESS_CACHE: {
   },
   [RoutablePlatform.DFYN.name]: {
     ...INITIAL_CACHE_STATE
+  },
+  [RoutablePlatform.RADIOSHACK.name]: {
+    ...INITIAL_CACHE_STATE
   }
 }
 
