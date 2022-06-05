@@ -144,10 +144,10 @@ export class RoutablePlatform {
   public static readonly RADIOSHACK = new RoutablePlatform(
     'RadioShack',
     { 
-      [ChainId.MATIC]: DFYN_MATIC_FACTORY_ADDRESS
+      [ChainId.MATIC]: RADIOSHACK_MATIC_FACTORY_ADDRESS
     },
     { 
-      [ChainId.MATIC]: DFYN_MATIC_ROUTER_ADDRESS
+      [ChainId.MATIC]: RADIOSHACK_MATIC_ROUTER_ADDRESS
     },
     { 
       [ChainId.MATIC]: '0x3eef69365a159891ca18b545ccaf0d6aca9b22c988b8deb7a3e4fa2fc2418596'
