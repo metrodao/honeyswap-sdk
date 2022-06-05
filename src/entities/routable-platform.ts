@@ -200,7 +200,7 @@ export class RoutablePlatform {
       [ChainId.FANTOM]: TOMBSWAP_FANTOM_ROUTER_ADDRESS
     },
     { 
-      [ChainId.FANTOM]: '0xcdf2deca40a0bd56de8e3ce5c7df6727e5b1bf2ac96f283fa9c4b3e6b42ea9d2'
+      [ChainId.FANTOM]: '0x2dfbcf1b907f911bc66d083d103a1d7de0b8b21a6cb2a66a78d1f1559018fba4'
     },
     _30
   )
