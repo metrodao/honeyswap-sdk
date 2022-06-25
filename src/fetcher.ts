@@ -55,7 +55,8 @@ const TOKEN_LOGO_URI_CACHE: {
   [ChainId.SMARTBCH]: {},
   [ChainId.TELOS]: {},
   [ChainId.ZYX]: {},
-  [ChainId.THUNDERCORE]: {}
+  [ChainId.THUNDERCORE]: {},
+  [ChainId.ECHELON]: {}
 }
 
 /**
@@ -407,7 +408,8 @@ export abstract class Fetcher {
       [10000, 'https://tokens.metroswap.org/smartbch.json'],
       [40, 'https://tokens.metroswap.org/telos.json'],
       [55, 'https://tokens.metroswap.org/zyx.json'],
-      [108, 'https://tokens.metroswap.org/tt.json']
+      [108, 'https://tokens.metroswap.org/tt.json'],
+      [3000, 'https://tokens.metroswap.org/echelon.json']
     ])
 
     // const tokenRegistryContract = new Contract(TOKEN_REGISTRY_ADDRESS[chainId], TokenRegistryAbi, provider)

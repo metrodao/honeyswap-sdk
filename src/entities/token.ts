@@ -166,7 +166,14 @@ export class Token extends Currency {
         18,
         'METH',
         'Metro Wrapped Ether'
-    )
+    ),
+    [ChainId.ECHELON]: new Token(
+        ChainId.ECHELON,
+        '0x7c75445c5123c78ea276723dd3632570417729fc',
+        18,
+        'METH',
+        'Metro Wrapped Ether'
+    )   
   }
 
   public static readonly WSPOA: { [key: number]: Token } = {
@@ -245,6 +252,10 @@ export class Token extends Currency {
     [ChainId.THUNDERCORE]: new Token(ChainId.THUNDERCORE, '0x71F83A462C6d2674c731C0a67a0A6Ddf6562DC2d', 18, 'MWTT', 'Metro Wrapped TT')
   }
 
+  public static readonly WECH: { [key: number]: Token } = {
+    [ChainId.ECHELON]: new Token(ChainId.ECHELON, '0xadEE5159f4f82a35B9068A6c810bdc6c599Ba6a8', 18, 'WECH', 'Wrapped ECH')
+  }
+
   public static readonly DXD: { [key: number]: Token } = {
     [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xa1d65E8fB6e87b60FECCBc582F7f97804B725521', 18, 'DXD', 'DXdao'),
     [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0x554898A0BF98aB0C03ff86C7DccBE29269cc4d29', 18, 'DXD', 'DXdao'),
@@ -279,7 +290,8 @@ export class Token extends Currency {
     [ChainId.SMARTBCH]: Token.WBCH[ChainId.SMARTBCH],
     [ChainId.TELOS]: Token.WTLOS[ChainId.TELOS],
     [ChainId.ZYX]: Token.WZYX[ChainId.ZYX],
-    [ChainId.THUNDERCORE]: Token.WTT[ChainId.THUNDERCORE]
+    [ChainId.THUNDERCORE]: Token.WTT[ChainId.THUNDERCORE],
+    [ChainId.ECHELON]: Token.WECH[ChainId.ECHELON]
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
@@ -358,3 +370,4 @@ export const WBCH = Token.WBCH
 export const WTLOS = Token.WTLOS
 export const WZYX = Token.WZYX
 export const WTT = Token.WTT
+export const WECH = Token.WECH

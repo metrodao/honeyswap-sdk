@@ -44,7 +44,8 @@ const INITIAL_CACHE_STATE = {
   [ChainId.SMARTBCH]: {},
   [ChainId.TELOS]: {},
   [ChainId.ZYX]: {},
-  [ChainId.THUNDERCORE]: {}
+  [ChainId.THUNDERCORE]: {},
+  [ChainId.ECHELON]: {}
 }
 
 let PAIR_ADDRESS_CACHE: {
