@@ -59,18 +59,21 @@ export class RoutablePlatform {
     'Honeyswap',
     { 
       [ChainId.MAINNET]: HONEYSWAP_FACTORY_ADDRESS, 
+      [ChainId.ETHW]: HONEYSWAP_FACTORY_ADDRESS,
       [ChainId.RINKEBY]: HONEYSWAP_FACTORY_ADDRESS, 
       [ChainId.MATIC]: HONEYSWAP_MATIC_FACTORY_ADDRESS,
       [ChainId.XDAI]: HONEYSWAP_XDAI_FACTORY_ADDRESS 
     },
     { 
       [ChainId.MAINNET]: HONEYSWAP_ROUTER_ADDRESS, 
+      [ChainId.ETHW]: HONEYSWAP_ROUTER_ADDRESS,
       [ChainId.RINKEBY]: HONEYSWAP_ROUTER_ADDRESS, 
       [ChainId.MATIC]: HONEYSWAP_MATIC_ROUTER_ADDRESS,
       [ChainId.XDAI]: HONEYSWAP_XDAI_ROUTER_ADDRESS 
     },
     { 
       [ChainId.MAINNET]: '0xd306a548755b9295ee49cc729e13ca4a45e00199bbd890fa146da43a50571776',
+      [ChainId.ETHW]: '0xd306a548755b9295ee49cc729e13ca4a45e00199bbd890fa146da43a50571776',
       [ChainId.MATIC]: '0xae81bbc68f315fbbf7617eb881349af83b1e95241f616966e1e0583ecd0793fe',
       [ChainId.XDAI]: '0x3f88503e8580ab941773b59034fb4b2a63e86dbc031b3633a925533ad3ed2b93'
     },
@@ -78,15 +81,27 @@ export class RoutablePlatform {
   )
   public static readonly UNISWAP = new RoutablePlatform(
     'Uniswap',
-    { [ChainId.MAINNET]: UNISWAP_FACTORY_ADDRESS, [ChainId.RINKEBY]: UNISWAP_FACTORY_ADDRESS },
-    { [ChainId.MAINNET]: UNISWAP_ROUTER_ADDRESS, [ChainId.RINKEBY]: UNISWAP_ROUTER_ADDRESS },
-    { [ChainId.MAINNET]: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f' },
+    { 
+      [ChainId.MAINNET]: UNISWAP_FACTORY_ADDRESS,
+      [ChainId.ETHW]: UNISWAP_FACTORY_ADDRESS,
+      [ChainId.RINKEBY]: UNISWAP_FACTORY_ADDRESS 
+    },
+    {
+      [ChainId.MAINNET]: UNISWAP_ROUTER_ADDRESS,
+      [ChainId.ETHW]: UNISWAP_ROUTER_ADDRESS,
+      [ChainId.RINKEBY]: UNISWAP_ROUTER_ADDRESS
+    },
+    {
+      [ChainId.MAINNET]: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+      [ChainId.ETHW]: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f'
+    },
     _30
   )
   public static readonly SUSHISWAP = new RoutablePlatform(
     'Sushiswap',
     { 
       [ChainId.MAINNET]: SUSHISWAP_FACTORY_ADDRESS, 
+      [ChainId.ETHW]: SUSHISWAP_FACTORY_ADDRESS,
       [ChainId.RINKEBY]: SUSHISWAP_FACTORY_ADDRESS, 
       [ChainId.MATIC]: SUSHISWAP_MATIC_FACTORY_ADDRESS,
       [ChainId.XDAI]: SUSHISWAP_XDAI_FACTORY_ADDRESS,
@@ -94,6 +109,7 @@ export class RoutablePlatform {
     },
     { 
       [ChainId.MAINNET]: SUSHISWAP_ROUTER_ADDRESS, 
+      [ChainId.ETHW]: SUSHISWAP_ROUTER_ADDRESS,
       [ChainId.RINKEBY]: SUSHISWAP_ROUTER_ADDRESS, 
       [ChainId.MATIC]: SUSHISWAP_MATIC_ROUTER_ADDRESS,
       [ChainId.XDAI]: SUSHISWAP_XDAI_ROUTER_ADDRESS,
@@ -101,6 +117,7 @@ export class RoutablePlatform {
     },
     { 
       [ChainId.MAINNET]: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
+      [ChainId.ETHW]: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
       [ChainId.MATIC]: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
       [ChainId.XDAI]: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303',
       [ChainId.FANTOM]: '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303'
