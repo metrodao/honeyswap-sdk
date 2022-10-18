@@ -35,6 +35,7 @@ const TOKEN_LOGO_URI_CACHE: {
   [chainId in ChainId]: { [address: string]: string }
 } = {
   [ChainId.MAINNET]: {},
+  [ChainId.ETHW]: {},
   [ChainId.XDAI]: {},
   [ChainId.SOKOL]: {},
   [ChainId.ARBITRUM_TESTNET_V3]: {},
@@ -391,6 +392,7 @@ export abstract class Fetcher {
   public static async fetchDxDaoTokenList(chainId: ChainId): Promise<TokenList> {
     const tokenListUrl = new Map([
       [1, 'https://tokens.coingecko.com/uniswap/all.json'],
+      [10001, 'https://tokens.metroswap.org/ethw.json'],
       [100, 'https://tokens.metroswap.org/xdai.json'],
       [137, 'https://tokens.metroswap.org'],
       [43114, 'https://tokens.metroswap.org/avalanche.json'],

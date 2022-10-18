@@ -18,6 +18,13 @@ export class Token extends Currency {
       'WETH',
       'Wrapped Ether'
     ),
+    [ChainId.ETHW]: new Token(
+        ChainId.ETHW,
+        '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+        18,
+        'WETH',
+        'Wrapped Ether'
+      ),
     [ChainId.RINKEBY]: new Token(
       ChainId.RINKEBY,
       '0xc778417E063141139Fce010982780140Aa0cD5Ab',
@@ -270,6 +277,7 @@ export class Token extends Currency {
 
   private static readonly NATIVE_CURRENCY_WRAPPER: { [chainId in ChainId]: Token } = {
     [ChainId.MAINNET]: Token.WETH[ChainId.MAINNET],
+    [ChainId.ETHW]: Token.WETH[ChainId.ETHW],
     [ChainId.RINKEBY]: Token.WETH[ChainId.RINKEBY],
     [ChainId.ARBITRUM_TESTNET_V3]: Token.WETH[ChainId.ARBITRUM_TESTNET_V3],
     [ChainId.SOKOL]: Token.WSPOA[ChainId.SOKOL],

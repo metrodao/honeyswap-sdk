@@ -19,6 +19,7 @@ export class Currency {
 
   // Native currencies for deployment chains
   public static readonly ETHER: Currency = new Currency(18, 'ETH', 'Ether')
+  public static readonly ETHW: Currency = new Currency(18, 'ETHW', 'EtherW')
   public static readonly SPOA: Currency = new Currency(18, 'SPOA', 'Sokol POA')
   public static readonly XDAI: Currency = new Currency(18, 'XDAI', 'xDAI')
   public static readonly MATIC: Currency = new Currency(18, 'MATIC', 'MATIC')
@@ -42,6 +43,7 @@ export class Currency {
 
   private static readonly NATIVE_CURRENCY: { [chainId in ChainId]: Currency } = {
     [ChainId.MAINNET]: Currency.ETHER,
+    [ChainId.ETHW]: Currency.ETHW,
     [ChainId.RINKEBY]: Currency.ETHER,
     [ChainId.ARBITRUM_TESTNET_V3]: Currency.ETHER,
     [ChainId.SOKOL]: Currency.SPOA,
@@ -92,6 +94,7 @@ export class Currency {
 export const USD = Currency.USD
 
 export const ETHER = Currency.ETHER
+export const ETHW = Currency.ETHW
 export const SPOA = Currency.SPOA
 export const XDAI = Currency.XDAI
 export const MATIC = Currency.MATIC
