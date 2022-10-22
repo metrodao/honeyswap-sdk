@@ -22,6 +22,10 @@ const MINIMUM_STAKED_AMOUNT_NATIVE_CURRENCY: { [chainId in ChainId]: CurrencyAmo
     utils.parseUnits('0.1', Token.getNative(ChainId.ETHW).decimals).toString(),
     ChainId.ETHW
   ),
+  [ChainId.ETF]: CurrencyAmount.nativeCurrency(
+    utils.parseUnits('0.1', Token.getNative(ChainId.ETF).decimals).toString(),
+    ChainId.ETF
+  ),
   [ChainId.XDAI]: CurrencyAmount.nativeCurrency(
     utils.parseUnits('1000', Token.getNative(ChainId.XDAI).decimals).toString(),
     ChainId.XDAI

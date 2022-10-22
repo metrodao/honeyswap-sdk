@@ -7,6 +7,7 @@ import {
   rinkeby as coreRinkeby,
   mainnet as coreMainnet,
   ethw as coreEthw,
+  etf as coreEtf,
   arbitrumTestnetV3 as coreArbitrumTestnetV3,
   sokol as coreSokol,
   xdai as coreXDai,
@@ -33,6 +34,7 @@ import {
   rinkeby as peripheryRinkeby,
   mainnet as peripheryMainnet,
   ethw as peripheryEthw,
+  etf as peripheryEtf,
   arbitrumTestnetV3 as peripheryArbitrumTestnetV3,
   sokol as peripherySokol,
   xdai as peripheryXDai,
@@ -63,6 +65,7 @@ export enum ChainId {
   MAINNET = 1,
   RINKEBY = 4,
   ETHW = 10001,
+  ETF = 513100,
   ARBITRUM_TESTNET_V3 = 79377087078960,
   SOKOL = 77,
   XDAI = 100,
@@ -102,6 +105,7 @@ export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 export const FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.MAINNET]: coreMainnet.factory,
   [ChainId.ETHW]: coreEthw.factory,
+  [ChainId.ETF]: coreEtf.factory,
   [ChainId.RINKEBY]: coreRinkeby.factory,
   [ChainId.ARBITRUM_TESTNET_V3]: coreArbitrumTestnetV3.factory,
   [ChainId.SOKOL]: coreSokol.factory,
@@ -130,6 +134,7 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
   [ChainId.RINKEBY]: peripheryRinkeby.router,
   [ChainId.MAINNET]: peripheryMainnet.router,
   [ChainId.ETHW]: peripheryEthw.router,
+  [ChainId.ETF]: peripheryEtf.router,
   [ChainId.ARBITRUM_TESTNET_V3]: peripheryArbitrumTestnetV3.router,
   [ChainId.SOKOL]: peripherySokol.router,
   [ChainId.XDAI]: peripheryXDai.router,
@@ -156,6 +161,7 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } = {
 export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.MAINNET]: '0x0000000000000000000000000000000000001234',
   [ChainId.ETHW]: '0x0000000000000000000000000000000000001234',
+  [ChainId.ETF]: '0x0000000000000000000000000000000000001234',
   [ChainId.RINKEBY]: '0xDcA39454f0B83c6f0807708b0E6a620dd9BA6808',
   [ChainId.ARBITRUM_TESTNET_V3]: '0xB95Ad562EDE8DD78BBFC287fA18150e802b09D9F',
   [ChainId.SOKOL]: '0xD436e756Cf41318ADeC62E8dCbEF2608753Ae068',
@@ -183,6 +189,7 @@ export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId: number]: string } = {
 export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
   [ChainId.MAINNET]: '0x93DB90445B76329e9ed96ECd74e76D8fbf2590d8',
   [ChainId.ETHW]: '0x0000000000000000000000000000000000001234',
+  [ChainId.ETF]: '0x0000000000000000000000000000000000001234',
   [ChainId.RINKEBY]: '0x815d1b18f6baaeb3853b0f637475a5c2b28e2253',
   [ChainId.ARBITRUM_TESTNET_V3]: '0x9d6f6d86b81289e40e07fcda805c06f6e9b8f629',
   [ChainId.SOKOL]: '0x681c3836a5589b933062ACA4fd846c1287a2865F',
@@ -210,6 +217,7 @@ export const TOKEN_REGISTRY_ADDRESS: { [chainId: number]: string } = {
 export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
   [ChainId.MAINNET]: 1,
   [ChainId.ETHW]: 10001,
+  [ChainId.ETF]: 513100,
   [ChainId.RINKEBY]: 1,
   [ChainId.ARBITRUM_TESTNET_V3]: 1,
   [ChainId.SOKOL]: 1,
@@ -237,6 +245,7 @@ export const DXSWAP_TOKEN_LIST_ID: { [chainId: number]: number } = {
 export const INIT_CODE_HASH: { [chainId: number]: string } = {
   [ChainId.MAINNET]: '0xd306a548755b9295ee49cc729e13ca4a45e00199bbd890fa146da43a50571776', // Swapr
   [ChainId.ETHW]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944', // Metroswap
+  [ChainId.ETF]: '0xd209d4a3c2669b33a316369bf7f6e8ae28fa38ae04c6f56a6bd94e47d8921944', // Metroswap
   [ChainId.RINKEBY]: '0xd306a548755b9295ee49cc729e13ca4a45e00199bbd890fa146da43a50571776', // Swapr
   [ChainId.ARBITRUM_TESTNET_V3]: '0xd306a548755b9295ee49cc729e13ca4a45e00199bbd890fa146da43a50571776', // Swapr
   [ChainId.SOKOL]: '0xd306a548755b9295ee49cc729e13ca4a45e00199bbd890fa146da43a50571776', // Swapr
@@ -293,6 +302,7 @@ export const SOLIDITY_TYPE_MAXIMA = {
 const PERMISSIVE_MULTICALL_ADDRESS: { [chainId: number]: string } = {
   [ChainId.MAINNET]: '0x0946f567d0ed891e6566c1da8e5093517f43571d',
   [ChainId.ETHW]: '0x0946f567d0ed891e6566c1da8e5093517f43571d',
+  [ChainId.ETF]: '0x0946f567d0ed891e6566c1da8e5093517f43571d',
   [ChainId.RINKEBY]: '0x798d8ced4dff8f054a5153762187e84751a73344',
   [ChainId.ARBITRUM_TESTNET_V3]: '0x73a08DC74eF4ed2c360199244bb69F1464204E7C',
   [ChainId.SOKOL]: '0x4D97Bd8eFaCf46b33c4438Ed0B7B6AABfa2359FB',

@@ -25,6 +25,7 @@ import { LiquidityMiningCampaign } from './liquidity-mining-campaign'
 const INITIAL_CACHE_STATE = {
   [ChainId.MAINNET]: {},
   [ChainId.ETHW]: {},
+  [ChainId.ETF]: {},
   [ChainId.RINKEBY]: {},
   [ChainId.ARBITRUM_TESTNET_V3]: {},
   [ChainId.SOKOL]: {},
